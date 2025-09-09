@@ -43,7 +43,7 @@ resource "aws_s3_bucket" "lambda_code_bucket" {
 }
 
 resource "aws_cloudformation_stack_set" "example" {
-  name              = var.stackset_name
+  name                    = var.stackset_name
   administration_role_arn = var.administration_role_arn
   execution_role_name     = aws_iam_role.stackset_execution_role.name
 
