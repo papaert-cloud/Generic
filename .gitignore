@@ -1,3 +1,18 @@
+# Local knowledge workspaces - not committed by default
+docs/
+scenarios/
+
+# System/editor clutter
+.vscode/
+*.code-workspace
+.DS_Store
+
+# Python/Node/.NET/etc cache (future-proofing)
+__pycache__/
+*.pyc
+node_modules/
+bin/
+obj/
 .DS_Store
 node_modules/
 .env

@@ -17,7 +17,8 @@ FORCE_ALLOW="${FORCE_ALLOW:-0}"
 
 usage() {
   echo "Usage: $0 -m 'commit message'"
-  echo "Environment variables: AUTO_PUSH=1 to auto-push, FORCE_ALLOW=1 to bypass branch enforcement"
+  echo "Environment variables: AUTO_PUSH=1 to auto-push, AUTO_PUSH=0 to disable, FORCE_ALLOW=1 to bypass branch enforcement"
+  echo "DRY_RUN=1 will simulate pushes locally (no network calls)."
   exit 2
 }
 
@@ -62,7 +63,11 @@ if [ "${AUTO_PUSH}" = "1" ]; then
   # Hint to user that an automatic push is about to occur
   echo "[hint] AUTO_PUSH=1 (default) — automatically pushing commit to ${PUSH_REMOTE}/${PUSH_BRANCH}"
   echo "[hint] To disable auto-push for this run: run with AUTO_PUSH=0"
-  git push "${PUSH_REMOTE}" "HEAD:${PUSH_BRANCH}"
+  if [ "${DRY_RUN:-0}" = "1" ]; then
+    echo "[dry-run] git push --dry-run ${PUSH_REMOTE} HEAD:${PUSH_BRANCH}"
+  else
+    git push "${PUSH_REMOTE}" "HEAD:${PUSH_BRANCH}"
+  fi
   echo "Push complete."
 else
   echo "AUTO_PUSH not enabled. To push now: git push ${PUSH_REMOTE} ${PUSH_BRANCH}"
