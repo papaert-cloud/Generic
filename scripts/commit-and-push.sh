@@ -6,10 +6,12 @@ set -euo pipefail
 # Usage: ./scripts/commit-and-push.sh -m "commit message"
 
 REPO_ROOT="$(git rev-parse --show-toplevel)" # repo root
+# default remote/branch targets
 PUSH_REMOTE="${PUSH_REMOTE:-origin}"
 PUSH_BRANCH="${PUSH_BRANCH:-lab-folio}"
 # AUTO_PUSH=1 to enable automatic pushes after a successful commit
-AUTO_PUSH="${AUTO_PUSH:-0}"
+# NOTE: default AUTO_PUSH is enabled for this environment; set AUTO_PUSH=0 to disable
+AUTO_PUSH="${AUTO_PUSH:-1}"
 # FORCE_ALLOW=1 to allow committing on branches other than lab-folio (use with caution)
 FORCE_ALLOW="${FORCE_ALLOW:-0}"
 
@@ -57,7 +59,9 @@ git commit -m "$MSG" || {
 echo "Committed on ${CURRENT_BRANCH}."
 
 if [ "${AUTO_PUSH}" = "1" ]; then
-  echo "AUTO_PUSH enabled → pushing to ${PUSH_REMOTE}/${PUSH_BRANCH}"
+  # Hint to user that an automatic push is about to occur
+  echo "[hint] AUTO_PUSH=1 (default) — automatically pushing commit to ${PUSH_REMOTE}/${PUSH_BRANCH}"
+  echo "[hint] To disable auto-push for this run: run with AUTO_PUSH=0"
   git push "${PUSH_REMOTE}" "HEAD:${PUSH_BRANCH}"
   echo "Push complete."
 else
