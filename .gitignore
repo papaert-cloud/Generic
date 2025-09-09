@@ -19,3 +19,4 @@ node_modules/
 
 # Local documentation and scenario lab (not committed by default)
 docs/
+.terraform/
