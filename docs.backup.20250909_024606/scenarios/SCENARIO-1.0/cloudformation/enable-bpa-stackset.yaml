@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: StackSet to enable S3 Block Public Access across target accounts
+Parameters:
+  S3BlockPublicAccess:
+    Type: String
+    Default: 'true'
+Resources:
+  S3BlockPublicAccessConfig:
+    Type: AWS::S3::AccountPublicAccessBlock
+    Properties:
+      BlockPublicAcls: true
+      BlockPublicPolicy: true
+      IgnorePublicAcls: true
+      RestrictPublicBuckets: true
