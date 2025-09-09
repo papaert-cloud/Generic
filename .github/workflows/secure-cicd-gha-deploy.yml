@@ -26,8 +26,21 @@ jobs:
           cd Infra/solutions/scenario-s003-000-secure-cicd-gha
           ./upload.sh ${{ secrets.LAMBDA_DEPLOY_BUCKET }} remediate/remediate.zip
 
+  tf-lint-validate:
+    runs-on: ubuntu-latest
+    container:
+      image: hashicorp/terraform:1.6.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: terraform fmt and validate
+        working-directory: Infra/solutions/scenario-s003-000-secure-cicd-gha/terraform
+        run: |
+          terraform init -input=false
+          terraform fmt -recursive
+          terraform validate || true
+
   terragrunt-apply:
-    needs: build-and-upload
+    needs: [build-and-upload, tf-lint-validate]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
