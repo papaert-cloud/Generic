@@ -42,28 +42,3 @@
 .monaco-workbench .part.sidebar .monaco-list .monaco-list-row.focused {
   outline: 2px solid rgba(127,90,240,0.22) !important;
 }
-
-/* Visible divider between Explorer (left sidebar) and Terminal/Panel (bottom) */
-/* Adds a subtle right border on the sidebar and a matching top border on the panel */
-.monaco-workbench .part.sidebar {
-  /* thicker, more opaque divider for clearer separation */
-  border-right: 2px solid rgba(127,90,240,0.32) !important;
-  box-shadow: none !important;
-}
-
-.monaco-workbench .part.panel {
-  border-top: 2px solid rgba(127,90,240,0.32) !important;
-}
-
-/* Strengthen the divider when focused or hovered to improve visibility */
-.monaco-workbench .part.sidebar:hover {
-  border-right-color: rgba(127,90,240,0.6) !important;
-}
-.monaco-workbench .part.panel:hover {
-  border-top-color: rgba(127,90,240,0.6) !important;
-}
-
-/* Optional subtle inner glow to help the divider stand out against dark backgrounds */
-.monaco-workbench .part.sidebar {
-  box-shadow: inset -6px 0 8px -6px rgba(127,90,240,0.06) !important;
-}
