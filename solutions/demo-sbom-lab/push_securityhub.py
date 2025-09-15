@@ -6,7 +6,7 @@ valid importable module name so unit tests can `import push_securityhub`.
 import sys
 import json
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 
 SEVERITY_MAP = {
     'CRITICAL': (90, 'CRITICAL'),
@@ -31,7 +31,7 @@ def map_severity(level):
 
 
 def make_finding(vuln, product_arn, account_id):
-    now = datetime.utcnow().isoformat(timespec='seconds') + 'Z'
+    now = datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z')
     vid = vuln.get('VulnerabilityID') or str(uuid.uuid4())
     title = f"Vulnerability: {vid}"
     desc = vuln.get('Description') or vuln.get('Title') or ''
