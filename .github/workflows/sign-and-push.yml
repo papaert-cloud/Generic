@@ -33,10 +33,11 @@ jobs:
       - name: Sign image with cosign (KMS key)
         env:
           COSIGN_EXPERIMENTAL: '1'
+          KMS_KEY_ARN: arn:aws:kms:${{ env.AWS_REGION }}:${{ env.AWS_ACCOUNT_ID }}:key/EXAMPLE
         run: |
           # KMS-key ARN example: arn:aws:kms:us-east-1:005965605891:key/EXAMPLE
           cosign sign \
-            --key kms://arn:aws:kms:${{ env.AWS_REGION }}:${{ env.AWS_ACCOUNT_ID }}:key/EXAMPLE \
+            --key kms://${KMS_KEY_ARN} \
             myapp:${{ github.sha }}
 
       - name: Push to ECR

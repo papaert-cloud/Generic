@@ -36,14 +36,13 @@ jobs:
 
       - name: Upload artifacts to S3 via OIDC
         env:
+          S3_BUCKET_BASE: s3://REPLACE-ME-demo-bucket
           S3_URI: |
-            s3://REPLACE-ME-demo-bucket/${{ github.repository }}/$GITHUB_RUN_ID/
+            ${S3_BUCKET_BASE}/${{ github.repository }}/$GITHUB_RUN_ID/
         run: |
-          # Configure AWS credentials via OIDC and assume role (example uses aws-actions/configure-aws-credentials)
+          # Configure AWS credentials via OIDC and assume role
           echo "Uploading artifacts to $S3_URI"
           gh auth setup-git 2>/dev/null || true
-          # The recommended action is aws-actions/configure-aws-credentials with role-to-assume and OIDC
-          # See README for example IAM trust policy and bucket policy
           ls -la output
 
   kyverno-check:

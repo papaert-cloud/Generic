@@ -1,9 +1,12 @@
-name: Scan → Security Hub (ingest)
+---
+name: Scan 1 Security Hub (ingest)
 
 on:
   workflow_run:
-    workflows: ["SBOM & SCA Pipeline"]
-    types: [completed]
+    workflows:
+      - "SBOM & SCA Pipeline"
+    types:
+      - completed
 
 permissions:
   id-token: write

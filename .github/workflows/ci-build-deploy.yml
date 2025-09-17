@@ -19,6 +19,8 @@ permissions:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    env:
+      AWS_ROLE_ECR: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsECRPush
     steps:
       - uses: actions/checkout@v4
 
@@ -39,7 +41,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           # create this role in your account with ECR push perms and OIDC trust
-          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsECRPush
+          role-to-assume: ${{ env.AWS_ROLE_ECR }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Build and push image
