@@ -27,13 +27,16 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           # role must allow kms:Sign/Encrypt and access to ECR push
-          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsKMSSign
+          role-to-assume: >
+            arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsKMSSign
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Sign image with cosign (KMS key)
         env:
           COSIGN_EXPERIMENTAL: '1'
-          KMS_KEY_ARN: arn:aws:kms:${{ env.AWS_REGION }}:${{ env.AWS_ACCOUNT_ID }}:key/EXAMPLE
+            KMS_KEY_ARN: >-
+              arn:aws:kms:${{ env.AWS_REGION }}:${{ env.AWS_ACCOUNT_ID }}:key/
+              EXAMPLE-KEY-ARN-WITH-LONG-ID
         run: |
           # KMS-key ARN example: arn:aws:kms:us-east-1:005965605891:key/EXAMPLE
           cosign sign \
