@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Convert Trivy JSON scan results into AWS Security Hub BatchImportFindings format.
-Usage: push-securityhub.py <trivy-scan.json> <out-findings.json>
+This module provides the canonical implementation for converting Trivy JSON scan results
+into AWS Security Hub BatchImportFindings format. Scripts and tests should import and use
+this module directly to avoid code duplication.
 """
 import sys
 import json
@@ -74,15 +76,46 @@ def convert_trivy(trivy_json, product_arn='arn:aws:securityhub:::product/third-p
     return {'Findings': findings}
 
 
-if __name__ == '__main__':
-    if len(sys.argv) < 3:
-        print('Usage: push-securityhub.py <trivy-scan.json> <out-findings.json>')
-        sys.exit(2)
-    inpath = sys.argv[1]
-    outpath = sys.argv[2]
+def validate_findings_schema(findings):
+    """Perform lightweight validation of the findings structure.
+
+    This does not fully validate the AWS Security Hub JSON Schema but enforces
+    required top-level elements and common field types to catch malformed output
+    early in tests.
+    """
+    if not isinstance(findings, dict):
+        raise TypeError('findings must be a dict')
+    if 'Findings' not in findings:
+        raise ValueError('missing Findings key')
+    if not isinstance(findings['Findings'], list):
+        raise TypeError('Findings must be a list')
+    for f in findings['Findings']:
+        if not isinstance(f, dict):
+            raise TypeError('each finding must be a dict')
+        for required in ('Id', 'ProductArn', 'Severity', 'Title', 'Resources'):
+            if required not in f:
+                raise ValueError(f'missing required field: {required}')
+        if not isinstance(f['Resources'], list) or len(f['Resources']) == 0:
+            raise ValueError('Resources must be a non-empty list')
+    return True
+
+
+def _main(argv=None):
+    if argv is None:
+        argv = sys.argv
+    if len(argv) < 3:
+        print('Usage: push_securityhub.py <trivy-scan.json> <out-findings.json>')
+        return 2
+    inpath = argv[1]
+    outpath = argv[2]
     with open(inpath, 'r') as f:
         trivy = json.load(f)
     findings = convert_trivy(trivy)
     with open(outpath, 'w') as f:
         json.dump(findings, f, indent=2)
     print(f'Wrote {len(findings["Findings"])} findings to {outpath}')
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(_main())
