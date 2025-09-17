@@ -23,7 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ github.event.inputs.environment }}
     env:
-      TF_ROLE_ARN: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsTerraformApply
+      TF_ROLE_ARN: >
+        arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsTerraformApply
     steps:
       - uses: actions/checkout@v4
 
@@ -46,7 +47,8 @@ jobs:
       - name: Terraform Apply (manual gated)
         run: |
           cd $TF_WORKING_DIR
-          # Re-run plan and apply. In practice, prefer to upload an approved binary tfplan and apply that.
+          # Re-run plan and apply.
+          # Prefer uploading an approved binary tfplan and applying that.
           terraform plan -out=tfplan
           terraform apply -auto-approve tfplan
 

@@ -3,7 +3,8 @@ name: Image Rebase & Rebuild
 
 on:
   schedule:
-    - cron: '0 6 * * 0' # weekly
+    - cron: '0 6 * * 0'  # weekly
+  workflow_dispatch: true
 
 jobs:
   rebase:
@@ -11,7 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Find images using base image
-        run: echo "Find images dependent on base image and rebuild with updated base"
+        run: |
+          echo "Find images dependent on base image"
+          echo "Rebuild with updated base"
       - name: Rebuild, scan, sign
         run: |
           # Rebuild images, run syft/grype, cosign sign, push to ECR

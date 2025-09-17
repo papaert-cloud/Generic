@@ -21,8 +21,11 @@ jobs:
       - name: Set up syft + trivy
         run: |
           sudo apt-get update && sudo apt-get install -y jq
-          SYFT_INSTALL_URL=https://raw.githubusercontent.com/anchore/syft/main/install.sh
-          TRIVY_INSTALL_URL=https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh
+          SYFT_INSTALL_URL: >
+            https://raw.githubusercontent.com/anchore/syft/main/install.sh
+          TRIVY_BASE: >
+            https://raw.githubusercontent.com/aquasecurity/trivy/main
+          TRIVY_INSTALL_URL: ${TRIVY_BASE}/contrib/install.sh
           curl -sSfL ${SYFT_INSTALL_URL} | sh -s -- -b /usr/local/bin
           curl -sfL ${TRIVY_INSTALL_URL} | sh -s -- -b /usr/local/bin
 
@@ -54,10 +57,12 @@ jobs:
 
       - name: Run Kyverno CLI (example)
         run: |
-          # If you want to run Kyverno policies in CI without cluster, use kyverno CLI
+          # If you want to run Kyverno policies in CI without cluster,
+          # use the Kyverno CLI
+          KYVERNO_IMAGE=ghcr.io/kyverno/kyverno:latest
           docker run --rm \
             -v "${{ github.workspace }}:/workspace" \
-            ghcr.io/kyverno/kyverno:latest kyverno test /workspace/policies || true
+            ${KYVERNO_IMAGE} kyverno test /workspace/policies || true
 
   notes:
     runs-on: ubuntu-latest

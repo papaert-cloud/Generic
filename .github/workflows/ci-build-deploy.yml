@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch: true
 
 env:
   AWS_REGION: us-east-1
@@ -20,7 +21,8 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     env:
-      AWS_ROLE_ECR: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsECRPush
+      AWS_ROLE_ECR: >
+        arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsECRPush
     steps:
       - uses: actions/checkout@v4
 
@@ -47,15 +49,19 @@ jobs:
       - name: Build and push image
         run: |
           mkdir -p artifacts
-          BUILD_SCRIPT=./github-actions/devops/solution-01-ci-build-deploy/scripts/build_and_push.sh
-          $BUILD_SCRIPT --tag "${{ github.sha }}"
+          BUILD_BASE: >
+            ./github-actions/devops/solution-01-ci-build-deploy/scripts
+          BUILD_SCRIPT=${BUILD_BASE}/build_and_push.sh
+          ${BUILD_SCRIPT} --tag "${{ github.sha }}"
 
       - name: Upload SBOM & metadata to S3 (artifact storage)
         run: |
-          # This step assumes the `build_and_push.sh` wrote artifacts/sbom.cyclonedx.json
+          # This step assumes the build script
+          # wrote artifacts/sbom.cyclonedx.json
           if [ -f artifacts/sbom.cyclonedx.json ]; then
             ART_BASE=s3://your-artifact-bucket/${{ github.run_id }}
-            aws s3 cp artifacts/sbom.cyclonedx.json ${ART_BASE}/sbom.cyclonedx.json
+            aws s3 cp artifacts/sbom.cyclonedx.json \
+              ${ART_BASE}/sbom.cyclonedx.json
           else
             echo "No SBOM found"
           fi
