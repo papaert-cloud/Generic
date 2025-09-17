@@ -52,8 +52,8 @@ jobs:
         run: |
           # This step assumes the `build_and_push.sh` wrote artifacts/sbom.cyclonedx.json
           if [ -f artifacts/sbom.cyclonedx.json ]; then
-            aws s3 cp artifacts/sbom.cyclonedx.json \
-              s3://your-artifact-bucket/${{ github.run_id }}/sbom.cyclonedx.json
+            ART_BASE=s3://your-artifact-bucket/${{ github.run_id }}
+            aws s3 cp artifacts/sbom.cyclonedx.json ${ART_BASE}/sbom.cyclonedx.json
           else
             echo "No SBOM found"
           fi

@@ -1,6 +1,5 @@
-name: Pre-commit Lint & Static Checks
-
 ---
+name: Pre-commit Lint & Static Checks
 on:
   pull_request:
     branches:

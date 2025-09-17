@@ -1,6 +1,5 @@
-name: Sign Image & Push
-
 ---
+name: Sign Image & Push
 on:
   push:
     branches:
@@ -26,19 +25,19 @@ jobs:
 
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v2
-          with:
-            # role must allow kms:Sign/Encrypt and access to ECR push
-            role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsKMSSign
-            aws-region: ${{ env.AWS_REGION }}
+        with:
+          # role must allow kms:Sign/Encrypt and access to ECR push
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsKMSSign
+          aws-region: ${{ env.AWS_REGION }}
 
       - name: Sign image with cosign (KMS key)
         env:
           COSIGN_EXPERIMENTAL: '1'
         run: |
           # KMS-key ARN example: arn:aws:kms:us-east-1:005965605891:key/EXAMPLE
-            cosign sign \
-              --key kms://arn:aws:kms:${{ env.AWS_REGION }}:${{ env.AWS_ACCOUNT_ID }}:key/EXAMPLE \
-              myapp:${{ github.sha }}
+          cosign sign \
+            --key kms://arn:aws:kms:${{ env.AWS_REGION }}:${{ env.AWS_ACCOUNT_ID }}:key/EXAMPLE \
+            myapp:${{ github.sha }}
 
       - name: Push to ECR
         run: |

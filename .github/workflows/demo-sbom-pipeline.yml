@@ -1,8 +1,7 @@
-name: Demo SBOM pipeline
-
 ---
+name: Demo SBOM pipeline
 on:
-  workflow_dispatch:
+  workflow_dispatch: true
   push:
     branches:
       - main
@@ -22,12 +21,10 @@ jobs:
       - name: Set up syft + trivy
         run: |
           sudo apt-get update && sudo apt-get install -y jq
-          curl -sSfL \
-            https://raw.githubusercontent.com/anchore/syft/main/install.sh \
-            | sh -s -- -b /usr/local/bin
-          curl -sfL \
-            https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh \
-            | sh -s -- -b /usr/local/bin
+          SYFT_INSTALL_URL=https://raw.githubusercontent.com/anchore/syft/main/install.sh
+          TRIVY_INSTALL_URL=https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh
+          curl -sSfL ${SYFT_INSTALL_URL} | sh -s -- -b /usr/local/bin
+          curl -sfL ${TRIVY_INSTALL_URL} | sh -s -- -b /usr/local/bin
 
       - name: Generate SBOM (syft)
         run: |

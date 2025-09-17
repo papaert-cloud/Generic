@@ -1,6 +1,5 @@
-name: SBOM & SCA Pipeline
-
 ---
+name: SBOM & SCA Pipeline
 on:
   pull_request:
     branches:
@@ -52,7 +51,6 @@ jobs:
       - name: Copy artifacts to S3 (secure storage)
         run: |
           # configure AWS creds via OIDC role that has PutObject to artifact bucket
-          aws s3 cp artifacts/grype.json \
-            s3://your-artifact-bucket/${{ github.run_id }}/grype.json || true
-          aws s3 cp artifacts/sbom.cyclonedx.json \
-            s3://your-artifact-bucket/${{ github.run_id }}/sbom.cyclonedx.json || true
+          ARTIFACT_BASE=s3://your-artifact-bucket/${{ github.run_id }}
+          aws s3 cp artifacts/grype.json ${ARTIFACT_BASE}/grype.json || true
+          aws s3 cp artifacts/sbom.cyclonedx.json ${ARTIFACT_BASE}/sbom.cyclonedx.json || true

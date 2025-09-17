@@ -21,7 +21,10 @@ jobs:
 
       - name: Convert to ASFF and push to Security Hub
         run: |
-          python3 github-actions/devsecops/solution-05-security-platform/scripts/grype_to_asff.py --input grype.json --output asff.json
+          GRYPE_SCRIPT=github-actions/devsecops/solution-05-security-platform/scripts/grype_to_asff.py
+          python3 ${GRYPE_SCRIPT} \
+            --input grype.json \
+            --output asff.json
 
       - name: Publish findings to Security Hub (requires role with securityhub:BatchImportFindings)
         env:

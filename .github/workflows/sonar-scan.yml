@@ -1,6 +1,5 @@
-name: SonarQube Scan (optional)
-
 ---
+name: SonarQube Scan (optional)
 on:
   pull_request:
     branches:

@@ -1,6 +1,5 @@
-name: Semgrep Scan
-
 ---
+name: Semgrep Scan
 on:
   pull_request:
     branches:

@@ -1,6 +1,5 @@
-name: Nightly SBOM Rescan
-
 ---
+name: Nightly SBOM Rescan
 on:
   schedule:
     - cron: '0 3 * * *' # daily
