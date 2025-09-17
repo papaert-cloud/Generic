@@ -1,0 +1,154 @@
+sonar	Set up job	﻿2025-09-17T06:14:00.7164189Z Current runner version: '2.328.0'
+sonar	Set up job	2025-09-17T06:14:00.7201246Z ##[group]Runner Image Provisioner
+sonar	Set up job	2025-09-17T06:14:00.7202456Z Hosted Compute Agent
+sonar	Set up job	2025-09-17T06:14:00.7203604Z Version: 20250829.383
+sonar	Set up job	2025-09-17T06:14:00.7204892Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+sonar	Set up job	2025-09-17T06:14:00.7206198Z Build Date: 2025-08-29T13:48:48Z
+sonar	Set up job	2025-09-17T06:14:00.7207200Z ##[endgroup]
+sonar	Set up job	2025-09-17T06:14:00.7208154Z ##[group]Operating System
+sonar	Set up job	2025-09-17T06:14:00.7209118Z Ubuntu
+sonar	Set up job	2025-09-17T06:14:00.7209874Z 24.04.3
+sonar	Set up job	2025-09-17T06:14:00.7210775Z LTS
+sonar	Set up job	2025-09-17T06:14:00.7211468Z ##[endgroup]
+sonar	Set up job	2025-09-17T06:14:00.7212268Z ##[group]Runner Image
+sonar	Set up job	2025-09-17T06:14:00.7213472Z Image: ubuntu-24.04
+sonar	Set up job	2025-09-17T06:14:00.7214384Z Version: 20250907.24.1
+sonar	Set up job	2025-09-17T06:14:00.7216073Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+sonar	Set up job	2025-09-17T06:14:00.7218649Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+sonar	Set up job	2025-09-17T06:14:00.7220589Z ##[endgroup]
+sonar	Set up job	2025-09-17T06:14:00.7225230Z ##[group]GITHUB_TOKEN Permissions
+sonar	Set up job	2025-09-17T06:14:00.7228900Z Actions: write
+sonar	Set up job	2025-09-17T06:14:00.7230039Z Attestations: write
+sonar	Set up job	2025-09-17T06:14:00.7230936Z Checks: write
+sonar	Set up job	2025-09-17T06:14:00.7231844Z Contents: write
+sonar	Set up job	2025-09-17T06:14:00.7232767Z Deployments: write
+sonar	Set up job	2025-09-17T06:14:00.7233981Z Discussions: write
+sonar	Set up job	2025-09-17T06:14:00.7234956Z Issues: write
+sonar	Set up job	2025-09-17T06:14:00.7236186Z Metadata: read
+sonar	Set up job	2025-09-17T06:14:00.7237154Z Models: read
+sonar	Set up job	2025-09-17T06:14:00.7237958Z Packages: write
+sonar	Set up job	2025-09-17T06:14:00.7238956Z Pages: write
+sonar	Set up job	2025-09-17T06:14:00.7239814Z PullRequests: write
+sonar	Set up job	2025-09-17T06:14:00.7240833Z RepositoryProjects: write
+sonar	Set up job	2025-09-17T06:14:00.7241911Z SecurityEvents: write
+sonar	Set up job	2025-09-17T06:14:00.7243077Z Statuses: write
+sonar	Set up job	2025-09-17T06:14:00.7244249Z ##[endgroup]
+sonar	Set up job	2025-09-17T06:14:00.7247655Z Secret source: Actions
+sonar	Set up job	2025-09-17T06:14:00.7248824Z Prepare workflow directory
+sonar	Set up job	2025-09-17T06:14:00.7742313Z Prepare all required actions
+sonar	Set up job	2025-09-17T06:14:00.7802654Z Getting action download info
+sonar	Set up job	2025-09-17T06:14:01.0587589Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+sonar	Set up job	2025-09-17T06:14:01.2621989Z Download action repository 'actions/setup-java@v4' (SHA:c5195efecf7bdfc987ee8bae7a71cb8b11521c00)
+sonar	Set up job	2025-09-17T06:14:01.8355165Z Complete job name: sonar
+sonar	Run actions/checkout@v4	﻿2025-09-17T06:14:01.9060315Z ##[group]Run actions/checkout@v4
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9061376Z with:
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9061792Z   repository: papaert-cloud/Generic
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9062485Z   token: ***
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9062865Z   ssh-strict: true
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9063556Z   ssh-user: git
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9064039Z   persist-credentials: true
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9064472Z   clean: true
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9064879Z   sparse-checkout-cone-mode: true
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9065344Z   fetch-depth: 1
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9065732Z   fetch-tags: false
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9066131Z   show-progress: true
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9066524Z   lfs: false
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9066892Z   submodules: false
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9067319Z   set-safe-directory: true
+sonar	Run actions/checkout@v4	2025-09-17T06:14:01.9068073Z ##[endgroup]
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0214821Z Syncing repository: papaert-cloud/Generic
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0217456Z ##[group]Getting Git version info
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0218622Z Working directory is '/home/runner/work/Generic/Generic'
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0220061Z [command]/usr/bin/git version
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0293927Z git version 2.51.0
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0321170Z ##[endgroup]
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0335697Z Temporarily overriding HOME='/home/runner/work/_temp/d27c536d-7924-48a5-9a23-be193534e57f' before making global git config changes
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0337325Z Adding repository directory to the temporary git global config as a safe directory
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0340818Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0380651Z Deleting the contents of '/home/runner/work/Generic/Generic'
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0384929Z ##[group]Initializing the repository
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0388918Z [command]/usr/bin/git init /home/runner/work/Generic/Generic
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0497162Z hint: Using 'master' as the name for the initial branch. This default branch name
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0498647Z hint: is subject to change. To configure the initial branch name to use in all
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0499956Z hint: of your new repositories, which will suppress this warning, call:
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0501490Z hint:
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0502473Z hint: 	git config --global init.defaultBranch <name>
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0503983Z hint:
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0505499Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0508127Z hint: 'development'. The just-created branch can be renamed via this command:
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0509491Z hint:
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0510291Z hint: 	git branch -m <name>
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0511105Z hint:
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0512246Z hint: Disable this message with "git config set advice.defaultBranchName false"
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0514698Z Initialized empty Git repository in /home/runner/work/Generic/Generic/.git/
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0518535Z [command]/usr/bin/git remote add origin https://github.com/papaert-cloud/Generic
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0561273Z ##[endgroup]
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0562503Z ##[group]Disabling automatic garbage collection
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0566571Z [command]/usr/bin/git config --local gc.auto 0
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0598183Z ##[endgroup]
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0599495Z ##[group]Setting up auth
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0606480Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0638836Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.0980641Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.1012252Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.1243729Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.1284199Z ##[endgroup]
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.1285501Z ##[group]Fetching the repository
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.1293128Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +69cb9140b0f2183b6658445de5aae5df7c564c6e:refs/remotes/pull/4/merge
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.7621516Z From https://github.com/papaert-cloud/Generic
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.7623607Z  * [new ref]         69cb9140b0f2183b6658445de5aae5df7c564c6e -> pull/4/merge
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.7660237Z ##[endgroup]
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.7662683Z ##[group]Determining the checkout info
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.7664027Z ##[endgroup]
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.7668208Z [command]/usr/bin/git sparse-checkout disable
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.7717234Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.7752774Z ##[group]Checking out the ref
+sonar	Run actions/checkout@v4	2025-09-17T06:14:02.7758998Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/4/merge
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0266898Z Note: switching to 'refs/remotes/pull/4/merge'.
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0267840Z 
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0268266Z You are in 'detached HEAD' state. You can look around, make experimental
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0269164Z changes and commit them, and you can discard any commits you make in this
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0270050Z state without impacting any branches by switching back to a branch.
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0270562Z 
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0270984Z If you want to create a new branch to retain commits you create, you may
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0271873Z do so (now or later) by using -c with the switch command. Example:
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0272375Z 
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0272612Z   git switch -c <new-branch-name>
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0272997Z 
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0273889Z Or undo this operation with:
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0274390Z 
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0274740Z   git switch -
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0275332Z 
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0276052Z Turn off this advice by setting config variable advice.detachedHead to false
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0277055Z 
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0277927Z HEAD is now at 69cb914 Merge 379d670590656498882307987b62cc76cf2116cd into b1fa9b563261d4d6cd806f081976006c7aa1a811
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0281688Z ##[endgroup]
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0324667Z [command]/usr/bin/git log -1 --format=%H
+sonar	Run actions/checkout@v4	2025-09-17T06:14:03.0349342Z 69cb9140b0f2183b6658445de5aae5df7c564c6e
+sonar	Setup Java	﻿2025-09-17T06:14:03.0634814Z ##[group]Run actions/setup-java@v4
+sonar	Setup Java	2025-09-17T06:14:03.0635438Z with:
+sonar	Setup Java	2025-09-17T06:14:03.0635978Z   java-version: 11
+sonar	Setup Java	2025-09-17T06:14:03.0636484Z   java-package: jdk
+sonar	Setup Java	2025-09-17T06:14:03.0636944Z   check-latest: false
+sonar	Setup Java	2025-09-17T06:14:03.0637459Z   server-id: github
+sonar	Setup Java	2025-09-17T06:14:03.0637958Z   server-username: GITHUB_ACTOR
+sonar	Setup Java	2025-09-17T06:14:03.0638511Z   server-password: GITHUB_TOKEN
+sonar	Setup Java	2025-09-17T06:14:03.0638994Z   overwrite-settings: true
+sonar	Setup Java	2025-09-17T06:14:03.0639546Z   job-status: success
+sonar	Setup Java	2025-09-17T06:14:03.0640166Z   token: ***
+sonar	Setup Java	2025-09-17T06:14:03.0640564Z ##[endgroup]
+sonar	Setup Java	2025-09-17T06:14:03.2709025Z ##[error]Input required and not supplied: distribution
+sonar	Post Setup Java	﻿2025-09-17T06:14:03.2876484Z Post job cleanup.
+sonar	Post Run actions/checkout@v4	﻿2025-09-17T06:14:03.4749809Z Post job cleanup.
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.5705816Z [command]/usr/bin/git version
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.5749712Z git version 2.51.0
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.5807270Z Temporarily overriding HOME='/home/runner/work/_temp/7dad226b-4cb3-4d95-b6bf-31c3a0c8c7d9' before making global git config changes
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.5808744Z Adding repository directory to the temporary git global config as a safe directory
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.5810204Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.5850600Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.5886386Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.6127562Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.6150162Z http.https://github.com/.extraheader
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.6163640Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+sonar	Post Run actions/checkout@v4	2025-09-17T06:14:03.6195395Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sonar	Complete job	﻿2025-09-17T06:14:03.6532859Z Cleaning up orphan processes

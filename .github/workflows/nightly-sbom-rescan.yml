@@ -1,5 +1,6 @@
 name: Nightly SBOM Rescan
 
+---
 on:
   schedule:
     - cron: '0 3 * * *' # daily
@@ -10,7 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Pull latest images list
-        run: echo "implement logic to enumerate latest image tags"
+        run: |
+          # implement logic to enumerate latest image tags
+          echo "implement logic to enumerate latest image tags"
       - name: Run syft/grype on images
         run: |
           # example placeholder

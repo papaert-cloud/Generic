@@ -1,10 +1,12 @@
+---
 name: CI Build & Deploy
-
 on:
   push:
-    branches: [ 'main' ]
+    branches:
+      - main
   pull_request:
-    branches: [ 'main' ]
+    branches:
+      - main
 
 env:
   AWS_REGION: us-east-1
@@ -36,19 +38,22 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsECRPush  # create this role in your account with ECR push perms and OIDC trust
+          # create this role in your account with ECR push perms and OIDC trust
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsECRPush
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Build and push image
         run: |
           mkdir -p artifacts
-          ./github-actions/devops/solution-01-ci-build-deploy/scripts/build_and_push.sh --tag ${{ github.sha }}
+          BUILD_SCRIPT=./github-actions/devops/solution-01-ci-build-deploy/scripts/build_and_push.sh
+          $BUILD_SCRIPT --tag "${{ github.sha }}"
 
       - name: Upload SBOM & metadata to S3 (artifact storage)
         run: |
           # This step assumes the `build_and_push.sh` wrote artifacts/sbom.cyclonedx.json
           if [ -f artifacts/sbom.cyclonedx.json ]; then
-            aws s3 cp artifacts/sbom.cyclonedx.json s3://your-artifact-bucket/${{ github.run_id }}/sbom.cyclonedx.json
+            aws s3 cp artifacts/sbom.cyclonedx.json \
+              s3://your-artifact-bucket/${{ github.run_id }}/sbom.cyclonedx.json
           else
             echo "No SBOM found"
           fi

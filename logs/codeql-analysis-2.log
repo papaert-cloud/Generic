@@ -1,0 +1,240 @@
+Analyze	Set up job	﻿2025-09-17T06:13:56.6813559Z Current runner version: '2.328.0'
+Analyze	Set up job	2025-09-17T06:13:56.6843354Z ##[group]Runner Image Provisioner
+Analyze	Set up job	2025-09-17T06:13:56.6844160Z Hosted Compute Agent
+Analyze	Set up job	2025-09-17T06:13:56.6844794Z Version: 20250829.383
+Analyze	Set up job	2025-09-17T06:13:56.6845376Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+Analyze	Set up job	2025-09-17T06:13:56.6846077Z Build Date: 2025-08-29T13:48:48Z
+Analyze	Set up job	2025-09-17T06:13:56.6846895Z ##[endgroup]
+Analyze	Set up job	2025-09-17T06:13:56.6847533Z ##[group]Operating System
+Analyze	Set up job	2025-09-17T06:13:56.6848114Z Ubuntu
+Analyze	Set up job	2025-09-17T06:13:56.6848616Z 24.04.3
+Analyze	Set up job	2025-09-17T06:13:56.6849105Z LTS
+Analyze	Set up job	2025-09-17T06:13:56.6849538Z ##[endgroup]
+Analyze	Set up job	2025-09-17T06:13:56.6850073Z ##[group]Runner Image
+Analyze	Set up job	2025-09-17T06:13:56.6850619Z Image: ubuntu-24.04
+Analyze	Set up job	2025-09-17T06:13:56.6851175Z Version: 20250907.24.1
+Analyze	Set up job	2025-09-17T06:13:56.6852160Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+Analyze	Set up job	2025-09-17T06:13:56.6853623Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+Analyze	Set up job	2025-09-17T06:13:56.6854837Z ##[endgroup]
+Analyze	Set up job	2025-09-17T06:13:56.6857850Z ##[group]GITHUB_TOKEN Permissions
+Analyze	Set up job	2025-09-17T06:13:56.6859811Z Actions: write
+Analyze	Set up job	2025-09-17T06:13:56.6860514Z Attestations: write
+Analyze	Set up job	2025-09-17T06:13:56.6860993Z Checks: write
+Analyze	Set up job	2025-09-17T06:13:56.6861458Z Contents: write
+Analyze	Set up job	2025-09-17T06:13:56.6862033Z Deployments: write
+Analyze	Set up job	2025-09-17T06:13:56.6862555Z Discussions: write
+Analyze	Set up job	2025-09-17T06:13:56.6863022Z Issues: write
+Analyze	Set up job	2025-09-17T06:13:56.6863554Z Metadata: read
+Analyze	Set up job	2025-09-17T06:13:56.6864041Z Models: read
+Analyze	Set up job	2025-09-17T06:13:56.6864495Z Packages: write
+Analyze	Set up job	2025-09-17T06:13:56.6865091Z Pages: write
+Analyze	Set up job	2025-09-17T06:13:56.6865573Z PullRequests: write
+Analyze	Set up job	2025-09-17T06:13:56.6866119Z RepositoryProjects: write
+Analyze	Set up job	2025-09-17T06:13:56.6866900Z SecurityEvents: write
+Analyze	Set up job	2025-09-17T06:13:56.6867933Z Statuses: write
+Analyze	Set up job	2025-09-17T06:13:56.6868823Z ##[endgroup]
+Analyze	Set up job	2025-09-17T06:13:56.6871640Z Secret source: Actions
+Analyze	Set up job	2025-09-17T06:13:56.6872881Z Prepare workflow directory
+Analyze	Set up job	2025-09-17T06:13:56.7328508Z Prepare all required actions
+Analyze	Set up job	2025-09-17T06:13:56.7382958Z Getting action download info
+Analyze	Set up job	2025-09-17T06:13:57.0335067Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+Analyze	Set up job	2025-09-17T06:13:57.1979691Z Download action repository 'github/codeql-action@v2' (SHA:b8d3b6e8af63cde30bdc382c0bc28114f4346c88)
+Analyze	Set up job	2025-09-17T06:14:02.9223292Z Complete job name: Analyze
+Analyze	Run actions/checkout@v4	﻿2025-09-17T06:14:02.9866357Z ##[group]Run actions/checkout@v4
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9867296Z with:
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9867559Z   repository: papaert-cloud/Generic
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9868030Z   token: ***
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9868257Z   ssh-strict: true
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9868480Z   ssh-user: git
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9868715Z   persist-credentials: true
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9868965Z   clean: true
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9869204Z   sparse-checkout-cone-mode: true
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9869476Z   fetch-depth: 1
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9869697Z   fetch-tags: false
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9869927Z   show-progress: true
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9870158Z   lfs: false
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9870390Z   submodules: false
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9870635Z   set-safe-directory: true
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:02.9871089Z ##[endgroup]
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.0961514Z Syncing repository: papaert-cloud/Generic
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.0963092Z ##[group]Getting Git version info
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.0963528Z Working directory is '/home/runner/work/Generic/Generic'
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.0964091Z [command]/usr/bin/git version
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1030285Z git version 2.51.0
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1055904Z ##[endgroup]
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1070579Z Temporarily overriding HOME='/home/runner/work/_temp/deea50b5-cf5d-4510-a1ab-a3ce03ad4bc7' before making global git config changes
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1071711Z Adding repository directory to the temporary git global config as a safe directory
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1075865Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1113138Z Deleting the contents of '/home/runner/work/Generic/Generic'
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1117117Z ##[group]Initializing the repository
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1121728Z [command]/usr/bin/git init /home/runner/work/Generic/Generic
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1222661Z hint: Using 'master' as the name for the initial branch. This default branch name
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1223709Z hint: is subject to change. To configure the initial branch name to use in all
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1224413Z hint: of your new repositories, which will suppress this warning, call:
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1224828Z hint:
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1225122Z hint: 	git config --global init.defaultBranch <name>
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1225458Z hint:
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1225770Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1226604Z hint: 'development'. The just-created branch can be renamed via this command:
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1227499Z hint:
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1227755Z hint: 	git branch -m <name>
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1228015Z hint:
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1228470Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1229555Z Initialized empty Git repository in /home/runner/work/Generic/Generic/.git/
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1239656Z [command]/usr/bin/git remote add origin https://github.com/papaert-cloud/Generic
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1274325Z ##[endgroup]
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1275080Z ##[group]Disabling automatic garbage collection
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1279450Z [command]/usr/bin/git config --local gc.auto 0
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1307519Z ##[endgroup]
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1308062Z ##[group]Setting up auth
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1314581Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1343768Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1786448Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.1815041Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.2037115Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.2073868Z ##[endgroup]
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.2075242Z ##[group]Fetching the repository
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.2083662Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +69cb9140b0f2183b6658445de5aae5df7c564c6e:refs/remotes/pull/4/merge
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.8873711Z From https://github.com/papaert-cloud/Generic
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.8874308Z  * [new ref]         69cb9140b0f2183b6658445de5aae5df7c564c6e -> pull/4/merge
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.8905011Z ##[endgroup]
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.8905596Z ##[group]Determining the checkout info
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.8907612Z ##[endgroup]
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.8912663Z [command]/usr/bin/git sparse-checkout disable
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.8951311Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.9005243Z ##[group]Checking out the ref
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:03.9006134Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/4/merge
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1433487Z Note: switching to 'refs/remotes/pull/4/merge'.
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1434088Z 
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1434465Z You are in 'detached HEAD' state. You can look around, make experimental
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1435308Z changes and commit them, and you can discard any commits you make in this
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1436221Z state without impacting any branches by switching back to a branch.
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1437093Z 
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1437454Z If you want to create a new branch to retain commits you create, you may
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1438209Z do so (now or later) by using -c with the switch command. Example:
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1438637Z 
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1438825Z   git switch -c <new-branch-name>
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1439119Z 
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1439592Z Or undo this operation with:
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1439879Z 
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1440017Z   git switch -
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1440239Z 
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1440608Z Turn off this advice by setting config variable advice.detachedHead to false
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1441146Z 
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1441760Z HEAD is now at 69cb914 Merge 379d670590656498882307987b62cc76cf2116cd into b1fa9b563261d4d6cd806f081976006c7aa1a811
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1448315Z ##[endgroup]
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1490812Z [command]/usr/bin/git log -1 --format=%H
+Analyze	Run actions/checkout@v4	2025-09-17T06:14:04.1513824Z 69cb9140b0f2183b6658445de5aae5df7c564c6e
+Analyze	Initialize CodeQL	﻿2025-09-17T06:14:04.1761086Z ##[group]Run github/codeql-action/init@v2
+Analyze	Initialize CodeQL	2025-09-17T06:14:04.1761400Z with:
+Analyze	Initialize CodeQL	2025-09-17T06:14:04.1761601Z   languages: go, javascript, python
+Analyze	Initialize CodeQL	2025-09-17T06:14:04.1761979Z   token: ***
+Analyze	Initialize CodeQL	2025-09-17T06:14:04.1762157Z   matrix: null
+Analyze	Initialize CodeQL	2025-09-17T06:14:04.1762326Z   debug: false
+Analyze	Initialize CodeQL	2025-09-17T06:14:04.1762509Z ##[endgroup]
+Analyze	Initialize CodeQL	2025-09-17T06:14:04.4796276Z ##[error]CodeQL Action major versions v1 and v2 have been deprecated. Please update all occurrences of the CodeQL Action in your workflow files to v3. For more information, see https://github.blog/changelog/2025-01-10-code-scanning-codeql-action-v2-is-now-deprecated/
+Analyze	Initialize CodeQL	2025-09-17T06:14:04.4805316Z Job run UUID is aa2788f9-c8d0-44d5-b73b-42036903fb8d.
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3541133Z ##[group]Setup CodeQL tools
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3595296Z [command]/usr/bin/tar --version
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3626352Z tar (GNU tar) 1.35
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3627423Z Copyright (C) 2023 Free Software Foundation, Inc.
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3628625Z License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3629585Z This is free software: you are free to change and redistribute it.
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3630307Z There is NO WARRANTY, to the extent permitted by law.
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3630712Z 
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3630908Z Written by John Gilmore and Jay Fenlason.
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3634415Z Found gnu tar version 1.35.
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3777233Z Found CodeQL tools version 2.23.0 in the toolcache.
+Analyze	Initialize CodeQL	2025-09-17T06:14:05.3778066Z Using CodeQL CLI version 2.23.0 from toolcache at /opt/hostedtoolcache/CodeQL/2.23.0/x64
+Analyze	Initialize CodeQL	2025-09-17T06:14:08.5294405Z [command]/opt/hostedtoolcache/CodeQL/2.23.0/x64/codeql/codeql version --format=json
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1724591Z {
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1725067Z   "productName" : "CodeQL",
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1725478Z   "vendor" : "GitHub",
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1725819Z   "version" : "2.23.0",
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1726225Z   "sha" : "407f5b2b71c60a8014fac9861a292050cb059ce6",
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1726877Z   "branches" : [
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1727199Z     "codeql-cli-2.23.0"
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1727585Z   ],
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1727941Z   "copyright" : "Copyright (C) 2019-2025 GitHub, Inc.",
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1728627Z   "unpackedLocation" : "/opt/hostedtoolcache/CodeQL/2.23.0/x64/codeql",
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1729364Z   "configFileLocation" : "/home/runner/.config/codeql/config",
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1729921Z   "configFileFound" : false,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1730317Z   "overlayVersion" : 4,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1730658Z   "features" : {
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1730978Z     "analysisSummaryV2Default" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1731360Z     "buildModeOption" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1731751Z     "bundleSupportsIncludeDiagnostics" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1732171Z     "bundleSupportsIncludeLogs" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1732756Z     "databaseInterpretResultsSupportsSarifRunProperty" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1733383Z     "featuresInVersionResult" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1733917Z     "indirectTracingSupportsStaticBinaries" : false,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1734512Z     "informsAboutUnsupportedPathFilters" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1735063Z     "supportsPython312" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1735523Z     "mrvaPackCreate" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1735919Z     "threatModelOption" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1736330Z     "traceCommandUseBuildMode" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1736936Z     "v2ramSizing" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1737724Z     "mrvaPackCreateMultipleQueries" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1738231Z     "setsCodeqlRunnerEnvVar" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1738719Z     "sarifMergeRunsFromEqualCategory" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1739205Z     "forceOverwrite" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1739624Z     "generateSummarySymbolMap" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1740120Z     "pythonDefaultIsToNotExtractStdlib" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1740610Z     "queryServerRunQueries" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1741079Z     "queryServerTrimCacheWithMode" : true,
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1741640Z     "resolveLanguagesFilterToLanguagesWithQueries" : true
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1742509Z   }
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1742724Z }
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1862256Z ##[endgroup]
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.1862688Z ##[group]Validating workflow
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.5366362Z Detected no issues with the code scanning workflow.
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.5367895Z ##[endgroup]
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.5369414Z ##[group]Load language configuration
+Analyze	Initialize CodeQL	2025-09-17T06:14:09.5375405Z [command]/opt/hostedtoolcache/CodeQL/2.23.0/x64/codeql/codeql resolve languages --format=betterjson --extractor-options-verbosity=4 --extractor-include-aliases
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3247202Z {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3248119Z   "aliases" : {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3264545Z     "c" : "cpp",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3265170Z     "c++" : "cpp",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3265687Z     "c-c++" : "cpp",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3266216Z     "c-cpp" : "cpp",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3267079Z     "c#" : "csharp",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3267608Z     "java-kotlin" : "java",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3268157Z     "kotlin" : "java",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3268696Z     "javascript-typescript" : "javascript",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3270251Z     "typescript" : "javascript"
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3270610Z   },
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3270878Z   "extractors" : {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3271169Z     "xml" : [
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3271438Z       {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3271874Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.23.0/x64/codeql/xml"
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3272407Z       }
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3272677Z     ],
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3272927Z     "python" : [
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3273208Z       {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3273644Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.23.0/x64/codeql/python",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3274230Z         "extractor_options" : {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3274576Z           "logging" : {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3274942Z             "title" : "Options pertaining to logging.",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3275465Z             "description" : "Options pertaining to logging.",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3275934Z             "type" : "object",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3276283Z             "properties" : {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3276634Z               "verbosity" : {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3277279Z                 "title" : "Python extractor logging verbosity level.",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3278912Z                 "description" : "Controls the level of verbosity of the CodeQL Python extractor.\nThe supported levels are (in order of increasing verbosity):\n\n  - off\n  - errors\n  - warnings\n  - info or progress\n  - debug or progress+\n  - trace or progress++\n  - progress+++\n",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3280565Z                 "type" : "string",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3281455Z                 "pattern" : "^(off|errors|warnings|(info|progress)|(debug|progress\\+)|(trace|progress\\+\\+)|progress\\+\\+\\+)$"
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3282235Z               }
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3282536Z             }
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3282791Z           },
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3283101Z           "python_executable_name" : {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3283712Z             "title" : "Controls the name of the Python executable used by the Python extractor.",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3285972Z             "description" : "The Python extractor uses platform-dependent heuristics to determine the name of the Python executable to use. Specifying a value for this option overrides the name of the Python executable used by the extractor. Accepted values are py, python and python3. Use this setting with caution, the Python extractor requires Python 3 to run.\n",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3288705Z             "type" : "string",
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3289122Z             "pattern" : "^(py|python|python3)$"
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3289536Z           }
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3289800Z         }
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3290072Z       }
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3290324Z     ],
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3290598Z     "properties" : [
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3290907Z       {
+Analyze	Initialize CodeQL	2025-09-17T06:14:11.3291400Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/2.23.0/x64/codeql/properties"

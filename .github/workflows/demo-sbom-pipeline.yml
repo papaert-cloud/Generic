@@ -1,9 +1,12 @@
 name: Demo SBOM pipeline
 
+---
 on:
   workflow_dispatch:
   push:
-    branches: [ main, docs-reorg ]
+    branches:
+      - main
+      - docs-reorg
 
 permissions:
   id-token: write   # required for GitHub OIDC
@@ -32,7 +35,8 @@ jobs:
 
       - name: Upload artifacts to S3 via OIDC
         env:
-          S3_URI: s3://REPLACE-ME-demo-bucket/${{ github.repository }}/$GITHUB_RUN_ID/
+          S3_URI: |
+            s3://REPLACE-ME-demo-bucket/${{ github.repository }}/$GITHUB_RUN_ID/
         run: |
           # Configure AWS credentials via OIDC and assume role (example uses aws-actions/configure-aws-credentials)
           echo "Uploading artifacts to $S3_URI"

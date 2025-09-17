@@ -1,0 +1,200 @@
+Analyze	UNKNOWN STEP	﻿2025-09-17T04:25:27.5969692Z Current runner version: '2.328.0'
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6005861Z ##[group]Runner Image Provisioner
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6007060Z Hosted Compute Agent
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6008236Z Version: 20250829.383
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6009287Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6010435Z Build Date: 2025-08-29T13:48:48Z
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6011658Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6012709Z ##[group]Operating System
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6013656Z Ubuntu
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6014656Z 24.04.3
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6015465Z LTS
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6016295Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6017271Z ##[group]Runner Image
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6018555Z Image: ubuntu-24.04
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6019411Z Version: 20250907.24.1
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6021359Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6024329Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6026394Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6031014Z ##[group]GITHUB_TOKEN Permissions
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6035124Z Actions: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6036070Z Attestations: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6036959Z Checks: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6037910Z Contents: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6039123Z Deployments: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6040059Z Discussions: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6041139Z Issues: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6041968Z Metadata: read
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6042878Z Models: read
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6043918Z Packages: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6044920Z Pages: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6045785Z PullRequests: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6046865Z RepositoryProjects: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6047884Z SecurityEvents: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6049221Z Statuses: write
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6050286Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6053502Z Secret source: Actions
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6054602Z Prepare workflow directory
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6548237Z Prepare all required actions
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.6606802Z Getting action download info
+Analyze	UNKNOWN STEP	2025-09-17T04:25:27.9225516Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+Analyze	UNKNOWN STEP	2025-09-17T04:25:28.0925536Z Download action repository 'github/codeql-action@v2' (SHA:b8d3b6e8af63cde30bdc382c0bc28114f4346c88)
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5055792Z Complete job name: Analyze
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5736441Z ##[group]Run actions/checkout@v4
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5737095Z with:
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5737351Z   repository: papaert-cloud/Generic
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5737867Z   token: ***
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5738490Z   ssh-strict: true
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5738727Z   ssh-user: git
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5738961Z   persist-credentials: true
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5739224Z   clean: true
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5739456Z   sparse-checkout-cone-mode: true
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5739740Z   fetch-depth: 1
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5739959Z   fetch-tags: false
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5740198Z   show-progress: true
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5740426Z   lfs: false
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5740649Z   submodules: false
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5740902Z   set-safe-directory: true
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.5741495Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7193441Z Syncing repository: papaert-cloud/Generic
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7194944Z ##[group]Getting Git version info
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7195370Z Working directory is '/home/runner/work/Generic/Generic'
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7195997Z [command]/usr/bin/git version
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7288351Z git version 2.51.0
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7314671Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7329636Z Temporarily overriding HOME='/home/runner/work/_temp/c485653d-152d-4c76-9aa2-847d568299c3' before making global git config changes
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7331108Z Adding repository directory to the temporary git global config as a safe directory
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7336235Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7378938Z Deleting the contents of '/home/runner/work/Generic/Generic'
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7383746Z ##[group]Initializing the repository
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7390590Z [command]/usr/bin/git init /home/runner/work/Generic/Generic
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7536468Z hint: Using 'master' as the name for the initial branch. This default branch name
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7537723Z hint: is subject to change. To configure the initial branch name to use in all
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7538629Z hint: of your new repositories, which will suppress this warning, call:
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7539225Z hint:
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7539831Z hint: 	git config --global init.defaultBranch <name>
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7540568Z hint:
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7540970Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7541666Z hint: 'development'. The just-created branch can be renamed via this command:
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7542491Z hint:
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7542955Z hint: 	git branch -m <name>
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7543513Z hint:
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7544322Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7545485Z Initialized empty Git repository in /home/runner/work/Generic/Generic/.git/
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7555147Z [command]/usr/bin/git remote add origin https://github.com/papaert-cloud/Generic
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7597249Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7598193Z ##[group]Disabling automatic garbage collection
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7602645Z [command]/usr/bin/git config --local gc.auto 0
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7632682Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7633396Z ##[group]Setting up auth
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7640958Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.7675555Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.8052670Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.8085154Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.8313704Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.8361944Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.8362912Z ##[group]Fetching the repository
+Analyze	UNKNOWN STEP	2025-09-17T04:25:33.8371784Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e381d3bfe93ebfc03c956362c6311d1dca33b42d:refs/remotes/pull/2/merge
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.4762157Z From https://github.com/papaert-cloud/Generic
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.4764761Z  * [new ref]         e381d3bfe93ebfc03c956362c6311d1dca33b42d -> pull/2/merge
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.4801435Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.4802136Z ##[group]Determining the checkout info
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.4833898Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.4834446Z [command]/usr/bin/git sparse-checkout disable
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.4861590Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.4892252Z ##[group]Checking out the ref
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.4896232Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7429524Z Note: switching to 'refs/remotes/pull/2/merge'.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7429979Z 
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7430287Z You are in 'detached HEAD' state. You can look around, make experimental
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7430999Z changes and commit them, and you can discard any commits you make in this
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7431699Z state without impacting any branches by switching back to a branch.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7432283Z 
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7432595Z If you want to create a new branch to retain commits you create, you may
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7433273Z do so (now or later) by using -c with the switch command. Example:
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7433665Z 
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7433818Z   git switch -c <new-branch-name>
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7434081Z 
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7434514Z Or undo this operation with:
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7434761Z 
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7434885Z   git switch -
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7435105Z 
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7435424Z Turn off this advice by setting config variable advice.detachedHead to false
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7435872Z 
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7436446Z HEAD is now at e381d3b Merge c1835627eb006b48e2e280a88528f4b34e779668 into eaf6367481144ac9db3594c8a5dad10b51e32afb
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7445028Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7485814Z [command]/usr/bin/git log -1 --format=%H
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7508390Z e381d3bfe93ebfc03c956362c6311d1dca33b42d
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7759883Z ##[group]Run github/codeql-action/init@v2
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7760192Z with:
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7760401Z   languages: go, javascript, python
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7760810Z   token: ***
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7760986Z   matrix: null
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7761162Z   debug: false
+Analyze	UNKNOWN STEP	2025-09-17T04:25:34.7761337Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.0843180Z ##[error]CodeQL Action major versions v1 and v2 have been deprecated. Please update all occurrences of the CodeQL Action in your workflow files to v3. For more information, see https://github.blog/changelog/2025-01-10-code-scanning-codeql-action-v2-is-now-deprecated/
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.0850836Z Job run UUID is 374dea86-5043-4db3-b7d1-554e849dd966.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9249307Z ##[group]Setup CodeQL tools
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9301207Z [command]/usr/bin/tar --version
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9360315Z tar (GNU tar) 1.35
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9360827Z Copyright (C) 2023 Free Software Foundation, Inc.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9361718Z License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9362544Z This is free software: you are free to change and redistribute it.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9363209Z There is NO WARRANTY, to the extent permitted by law.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9363599Z 
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9363788Z Written by John Gilmore and Jay Fenlason.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9366840Z Found gnu tar version 1.35.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9537878Z Found CodeQL tools version 2.23.0 in the toolcache.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:35.9539016Z Using CodeQL CLI version 2.23.0 from toolcache at /opt/hostedtoolcache/CodeQL/2.23.0/x64
+Analyze	UNKNOWN STEP	2025-09-17T04:25:39.8987095Z [command]/opt/hostedtoolcache/CodeQL/2.23.0/x64/codeql/codeql version --format=json
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5590850Z {
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5593085Z   "productName" : "CodeQL",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5593539Z   "vendor" : "GitHub",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5594031Z   "version" : "2.23.0",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5594408Z   "sha" : "407f5b2b71c60a8014fac9861a292050cb059ce6",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5594857Z   "branches" : [
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5595094Z     "codeql-cli-2.23.0"
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5595293Z   ],
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5595505Z   "copyright" : "Copyright (C) 2019-2025 GitHub, Inc.",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5595888Z   "unpackedLocation" : "/opt/hostedtoolcache/CodeQL/2.23.0/x64/codeql",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5596301Z   "configFileLocation" : "/home/runner/.config/codeql/config",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5596621Z   "configFileFound" : false,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5596845Z   "overlayVersion" : 4,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5597040Z   "features" : {
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5597232Z     "analysisSummaryV2Default" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5597485Z     "buildModeOption" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5597737Z     "bundleSupportsIncludeDiagnostics" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5598270Z     "bundleSupportsIncludeLogs" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5598607Z     "databaseInterpretResultsSupportsSarifRunProperty" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5598940Z     "featuresInVersionResult" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5599229Z     "indirectTracingSupportsStaticBinaries" : false,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5599544Z     "informsAboutUnsupportedPathFilters" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5599833Z     "supportsPython312" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5600050Z     "mrvaPackCreate" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5600264Z     "threatModelOption" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5600492Z     "traceCommandUseBuildMode" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5600809Z     "v2ramSizing" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5601410Z     "mrvaPackCreateMultipleQueries" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5601672Z     "setsCodeqlRunnerEnvVar" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5601934Z     "sarifMergeRunsFromEqualCategory" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5602184Z     "forceOverwrite" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5602406Z     "generateSummarySymbolMap" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5602677Z     "pythonDefaultIsToNotExtractStdlib" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5602951Z     "queryServerRunQueries" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5603194Z     "queryServerTrimCacheWithMode" : true,
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5603731Z     "resolveLanguagesFilterToLanguagesWithQueries" : true
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5604037Z   }
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5604182Z }
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5743823Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.5744248Z ##[group]Validating workflow
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.9096313Z Detected no issues with the code scanning workflow.
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.9097092Z ##[endgroup]
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.9099463Z ##[group]Load language configuration
+Analyze	UNKNOWN STEP	2025-09-17T04:25:40.9105980Z [command]/opt/hostedtoolcache/CodeQL/2.23.0/x64/codeql/codeql resolve languages --format=betterjson --extractor-options-verbosity=4 --extractor-include-aliases
+Analyze	UNKNOWN STEP	2025-09-17T04:25:42.9515986Z {
+Analyze	UNKNOWN STEP	2025-09-17T04:25:42.9518663Z   "aliases" : {
+Analyze	UNKNOWN STEP	2025-09-17T04:25:42.9519540Z     "c" : "cpp",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:42.9520288Z     "c++" : "cpp",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:42.9520865Z     "c-c++" : "cpp",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:42.9526385Z     "c-cpp" : "cpp",
+Analyze	UNKNOWN STEP	2025-09-17T04:25:42.9526746Z     "c#" : "csharp",

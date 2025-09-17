@@ -1,0 +1,200 @@
+lint	UNKNOWN STEP	﻿2025-09-17T04:25:28.4597587Z Current runner version: '2.328.0'
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4623619Z ##[group]Runner Image Provisioner
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4624572Z Hosted Compute Agent
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4625107Z Version: 20250829.383
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4625703Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4626435Z Build Date: 2025-08-29T13:48:48Z
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4627063Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4627641Z ##[group]Operating System
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4628264Z Ubuntu
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4628727Z 24.04.3
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4629203Z LTS
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4630237Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4630783Z ##[group]Runner Image
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4631375Z Image: ubuntu-24.04
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4631893Z Version: 20250907.24.1
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4632914Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4634394Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4635415Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4637808Z ##[group]GITHUB_TOKEN Permissions
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4640138Z Actions: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4640720Z Attestations: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4641327Z Checks: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4641808Z Contents: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4642359Z Deployments: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4642833Z Discussions: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4643415Z Issues: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4643874Z Metadata: read
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4644355Z Models: read
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4644883Z Packages: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4645426Z Pages: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4645900Z PullRequests: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4646515Z RepositoryProjects: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4647103Z SecurityEvents: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4647703Z Statuses: write
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4648300Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4650682Z Secret source: Actions
+lint	UNKNOWN STEP	2025-09-17T04:25:28.4651681Z Prepare workflow directory
+lint	UNKNOWN STEP	2025-09-17T04:25:28.5055673Z Prepare all required actions
+lint	UNKNOWN STEP	2025-09-17T04:25:28.5095854Z Getting action download info
+lint	UNKNOWN STEP	2025-09-17T04:25:28.9122257Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+lint	UNKNOWN STEP	2025-09-17T04:25:29.0910048Z Download action repository 'actions/setup-go@v4' (SHA:19bb51245e9c80abacb2e91cc42b33fa478b8639)
+lint	UNKNOWN STEP	2025-09-17T04:25:30.0272447Z Complete job name: lint
+lint	UNKNOWN STEP	2025-09-17T04:25:30.0995711Z ##[group]Run actions/checkout@v4
+lint	UNKNOWN STEP	2025-09-17T04:25:30.0996626Z with:
+lint	UNKNOWN STEP	2025-09-17T04:25:30.0997137Z   repository: papaert-cloud/Generic
+lint	UNKNOWN STEP	2025-09-17T04:25:30.0997846Z   token: ***
+lint	UNKNOWN STEP	2025-09-17T04:25:30.0998273Z   ssh-strict: true
+lint	UNKNOWN STEP	2025-09-17T04:25:30.0998698Z   ssh-user: git
+lint	UNKNOWN STEP	2025-09-17T04:25:30.0999141Z   persist-credentials: true
+lint	UNKNOWN STEP	2025-09-17T04:25:30.0999856Z   clean: true
+lint	UNKNOWN STEP	2025-09-17T04:25:30.1000300Z   sparse-checkout-cone-mode: true
+lint	UNKNOWN STEP	2025-09-17T04:25:30.1000802Z   fetch-depth: 1
+lint	UNKNOWN STEP	2025-09-17T04:25:30.1001280Z   fetch-tags: false
+lint	UNKNOWN STEP	2025-09-17T04:25:30.1001736Z   show-progress: true
+lint	UNKNOWN STEP	2025-09-17T04:25:30.1002180Z   lfs: false
+lint	UNKNOWN STEP	2025-09-17T04:25:30.1002586Z   submodules: false
+lint	UNKNOWN STEP	2025-09-17T04:25:30.1003059Z   set-safe-directory: true
+lint	UNKNOWN STEP	2025-09-17T04:25:30.1003825Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2151596Z Syncing repository: papaert-cloud/Generic
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2154706Z ##[group]Getting Git version info
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2156063Z Working directory is '/home/runner/work/Generic/Generic'
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2158130Z [command]/usr/bin/git version
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2221409Z git version 2.51.0
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2248960Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2265745Z Temporarily overriding HOME='/home/runner/work/_temp/cd703a98-658e-4640-9586-9f8ec9ea6de5' before making global git config changes
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2268443Z Adding repository directory to the temporary git global config as a safe directory
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2272861Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2312405Z Deleting the contents of '/home/runner/work/Generic/Generic'
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2316486Z ##[group]Initializing the repository
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2321654Z [command]/usr/bin/git init /home/runner/work/Generic/Generic
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2423240Z hint: Using 'master' as the name for the initial branch. This default branch name
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2425029Z hint: is subject to change. To configure the initial branch name to use in all
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2426541Z hint: of your new repositories, which will suppress this warning, call:
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2427770Z hint:
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2428829Z hint: 	git config --global init.defaultBranch <name>
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2430255Z hint:
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2431346Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2433161Z hint: 'development'. The just-created branch can be renamed via this command:
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2434583Z hint:
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2435305Z hint: 	git branch -m <name>
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2436120Z hint:
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2437208Z hint: Disable this message with "git config set advice.defaultBranchName false"
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2439100Z Initialized empty Git repository in /home/runner/work/Generic/Generic/.git/
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2442877Z [command]/usr/bin/git remote add origin https://github.com/papaert-cloud/Generic
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2482362Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2483701Z ##[group]Disabling automatic garbage collection
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2487637Z [command]/usr/bin/git config --local gc.auto 0
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2518966Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2520557Z ##[group]Setting up auth
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2527501Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2560587Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2883620Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+lint	UNKNOWN STEP	2025-09-17T04:25:30.2916430Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+lint	UNKNOWN STEP	2025-09-17T04:25:30.3147399Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+lint	UNKNOWN STEP	2025-09-17T04:25:30.3184807Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:30.3186320Z ##[group]Fetching the repository
+lint	UNKNOWN STEP	2025-09-17T04:25:30.3194932Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e381d3bfe93ebfc03c956362c6311d1dca33b42d:refs/remotes/pull/2/merge
+lint	UNKNOWN STEP	2025-09-17T04:25:31.3395054Z From https://github.com/papaert-cloud/Generic
+lint	UNKNOWN STEP	2025-09-17T04:25:31.3397758Z  * [new ref]         e381d3bfe93ebfc03c956362c6311d1dca33b42d -> pull/2/merge
+lint	UNKNOWN STEP	2025-09-17T04:25:31.3435038Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:31.3436361Z ##[group]Determining the checkout info
+lint	UNKNOWN STEP	2025-09-17T04:25:31.3438223Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:31.3446036Z [command]/usr/bin/git sparse-checkout disable
+lint	UNKNOWN STEP	2025-09-17T04:25:31.3501855Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+lint	UNKNOWN STEP	2025-09-17T04:25:31.3538681Z ##[group]Checking out the ref
+lint	UNKNOWN STEP	2025-09-17T04:25:31.3543402Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6066757Z Note: switching to 'refs/remotes/pull/2/merge'.
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6068220Z 
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6069683Z You are in 'detached HEAD' state. You can look around, make experimental
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6071732Z changes and commit them, and you can discard any commits you make in this
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6074328Z state without impacting any branches by switching back to a branch.
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6075880Z 
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6076836Z If you want to create a new branch to retain commits you create, you may
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6079048Z do so (now or later) by using -c with the switch command. Example:
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6080717Z 
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6081283Z   git switch -c <new-branch-name>
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6082257Z 
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6083319Z Or undo this operation with:
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6084293Z 
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6084774Z   git switch -
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6085479Z 
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6086622Z Turn off this advice by setting config variable advice.detachedHead to false
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6088383Z 
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6090492Z HEAD is now at e381d3b Merge c1835627eb006b48e2e280a88528f4b34e779668 into eaf6367481144ac9db3594c8a5dad10b51e32afb
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6095685Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6121452Z [command]/usr/bin/git log -1 --format=%H
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6143581Z e381d3bfe93ebfc03c956362c6311d1dca33b42d
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6443089Z ##[group]Run actions/setup-go@v4
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6444212Z with:
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6444997Z   go-version: 1.20
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6445901Z   check-latest: false
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6447112Z   token: ***
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6447921Z   cache: true
+lint	UNKNOWN STEP	2025-09-17T04:25:31.6448795Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:31.8002950Z Setup go version spec 1.20
+lint	UNKNOWN STEP	2025-09-17T04:25:31.8380470Z Attempting to download 1.20...
+lint	UNKNOWN STEP	2025-09-17T04:25:32.5428286Z matching 1.20...
+lint	UNKNOWN STEP	2025-09-17T04:25:32.5472623Z Acquiring 1.20.14 from https://github.com/actions/go-versions/releases/download/1.20.14-7809684997/go-1.20.14-linux-x64.tar.gz
+lint	UNKNOWN STEP	2025-09-17T04:25:33.3668911Z Extracting Go...
+lint	UNKNOWN STEP	2025-09-17T04:25:33.3781766Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/cc037c77-b9b1-4e43-8892-604fcb1eca18 -f /home/runner/work/_temp/4aca2035-89b5-49de-baf9-e86ee95e6ab0
+lint	UNKNOWN STEP	2025-09-17T04:25:35.0522452Z Successfully extracted go to /home/runner/work/_temp/cc037c77-b9b1-4e43-8892-604fcb1eca18
+lint	UNKNOWN STEP	2025-09-17T04:25:35.0523223Z Adding to the cache ...
+lint	UNKNOWN STEP	2025-09-17T04:25:39.1898259Z Successfully cached go to /opt/hostedtoolcache/go/1.20.14/x64
+lint	UNKNOWN STEP	2025-09-17T04:25:39.1901297Z Added go to the path
+lint	UNKNOWN STEP	2025-09-17T04:25:39.1902867Z Successfully set up Go version 1.20
+lint	UNKNOWN STEP	2025-09-17T04:25:39.2166082Z [command]/opt/hostedtoolcache/go/1.20.14/x64/bin/go env GOMODCACHE
+lint	UNKNOWN STEP	2025-09-17T04:25:39.2194361Z [command]/opt/hostedtoolcache/go/1.20.14/x64/bin/go env GOCACHE
+lint	UNKNOWN STEP	2025-09-17T04:25:39.2224365Z /home/runner/go/pkg/mod
+lint	UNKNOWN STEP	2025-09-17T04:25:39.2244306Z /home/runner/.cache/go-build
+lint	UNKNOWN STEP	2025-09-17T04:25:39.2278690Z ##[warning]Restore cache failed: Dependencies file is not found in /home/runner/work/Generic/Generic. Supported file pattern: go.sum
+lint	UNKNOWN STEP	2025-09-17T04:25:39.2305027Z go version go1.20.14 linux/amd64
+lint	UNKNOWN STEP	2025-09-17T04:25:39.2305285Z 
+lint	UNKNOWN STEP	2025-09-17T04:25:39.2305574Z ##[group]go env
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8607002Z GO111MODULE=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8607479Z GOARCH="amd64"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8607811Z GOBIN=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8608189Z GOCACHE="/home/runner/.cache/go-build"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8608625Z GOENV="/home/runner/.config/go/env"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8608991Z GOEXE=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8609538Z GOEXPERIMENT=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8609830Z GOFLAGS=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8610113Z GOHOSTARCH="amd64"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8610412Z GOHOSTOS="linux"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8610709Z GOINSECURE=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8611034Z GOMODCACHE="/home/runner/go/pkg/mod"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8611462Z GONOPROXY=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8611752Z GONOSUMDB=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8612050Z GOOS="linux"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8612351Z GOPATH="/home/runner/go"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8612706Z GOPRIVATE=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8613123Z GOPROXY="https://proxy.golang.org,direct"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8613624Z GOROOT="/opt/hostedtoolcache/go/1.20.14/x64"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8614053Z GOSUMDB="sum.golang.org"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8614389Z GOTMPDIR=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8614851Z GOTOOLDIR="/opt/hostedtoolcache/go/1.20.14/x64/pkg/tool/linux_amd64"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8615363Z GOVCS=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8615644Z GOVERSION="go1.20.14"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8616011Z GCCGO="gccgo"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8616282Z GOAMD64="v1"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8616535Z AR="ar"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8616795Z CC="gcc"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8617039Z CXX="g++"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8617293Z CGO_ENABLED="1"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8617568Z GOMOD="/dev/null"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8617835Z GOWORK=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8618102Z CGO_CFLAGS="-O2 -g"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8618671Z CGO_CPPFLAGS=""
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8618957Z CGO_CXXFLAGS="-O2 -g"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8619420Z CGO_FFLAGS="-O2 -g"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8619731Z CGO_LDFLAGS="-O2 -g"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8620037Z PKG_CONFIG="pkg-config"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8620970Z GOGCCFLAGS="-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build2201944440=/tmp/go-build -gno-record-gcc-switches"
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8621869Z 
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8622353Z ##[endgroup]
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8862546Z ##[group]Run gofmt_out=$(gofmt -l . || true)
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8862956Z [36;1mgofmt_out=$(gofmt -l . || true)[0m
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8863231Z [36;1mif [ -n "$gofmt_out" ]; then[0m
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8863529Z [36;1m  echo "Files not gofmt'd:\n$gofmt_out"; exit 1[0m
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8863794Z [36;1mfi[0m
+lint	UNKNOWN STEP	2025-09-17T04:25:39.8923317Z shell: /usr/bin/bash -e {0}
