@@ -18,10 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build image
+      - name: Build image (if Dockerfile exists)
         run: |
-          # build image for sbom generation
-          docker build -t app:${{ github.sha }} .
+          if [ -f Dockerfile ]; then
+            # build image for sbom generation
+            docker build -t app:${{ github.sha }} .
+          else
+            echo "No Dockerfile found; skipping image build"
+          fi
 
       - name: Generate SBOM (syft)
         run: |
