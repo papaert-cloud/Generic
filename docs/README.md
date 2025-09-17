@@ -33,35 +33,35 @@ Trivy/Grype/Snyk for vulnerability scans
 Pipelines block on Critical/High vulnerabilities
 
 
->>>>>>>  Secure Artifact Storage:
+>  Secure Artifact Storage: >
 
 Versioned S3 buckets with KMS encryption
 
 Immutable SBOMs + scan reports for SLSA/SSDF audit integrity
 
 
->>>>>>> Cosign Image Signing & Verification:
+> Cosign Image Signing & Verification: >
 
 Sign container images and SBOMs with cosign
 
 Enforce provenance in Kubernetes with Kyverno policies
 
 
->>>>>>> OIDC-based CI/CD:
+> OIDC-based CI/CD: >
 
 GitHub → AWS OIDC federation (no static keys)
 
 Short-lived AWS STS tokens for least-privilege role sessions
 
 
->>>>>>> Centralized Security Hub Integration:
+> Centralized Security Hub Integration: >
 
 Findings normalized into ASFF (AWS Security Finding Format)
 
 Ingested into AWS Security Hub for centralized visibility
 
 
->>>>>>> Kubernetes Runtime Enforcement:
+> Kubernetes Runtime Enforcement: >
 
 Enforce SBOM annotations + cosign signatures
 
