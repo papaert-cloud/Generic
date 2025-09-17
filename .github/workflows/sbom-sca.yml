@@ -30,11 +30,13 @@ jobs:
       - name: Generate SBOM (syft)
         run: |
           mkdir -p artifacts
-          syft app:${{ github.sha }} -o cyclonedx-json=./artifacts/sbom.cyclonedx.json
+          syft app:${{ github.sha }} \
+            -o cyclonedx-json=./artifacts/sbom.cyclonedx.json
 
       - name: Run Grype on SBOM
         run: |
-          grype sbom:./artifacts/sbom.cyclonedx.json -o json > ./artifacts/grype.json
+          grype sbom:./artifacts/sbom.cyclonedx.json \
+            -o json > ./artifacts/grype.json
 
       - name: Fail on high/critical
         run: |

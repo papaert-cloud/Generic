@@ -22,8 +22,12 @@ jobs:
       - name: Set up syft + trivy
         run: |
           sudo apt-get update && sudo apt-get install -y jq
-          curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
-          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+          curl -sSfL \
+            https://raw.githubusercontent.com/anchore/syft/main/install.sh \
+            | sh -s -- -b /usr/local/bin
+          curl -sfL \
+            https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh \
+            | sh -s -- -b /usr/local/bin
 
       - name: Generate SBOM (syft)
         run: |
@@ -55,7 +59,9 @@ jobs:
       - name: Run Kyverno CLI (example)
         run: |
           # If you want to run Kyverno policies in CI without cluster, use kyverno CLI
-          docker run --rm -v "${{ github.workspace }}:/workspace" ghcr.io/kyverno/kyverno:latest kyverno test /workspace/policies || true
+          docker run --rm \
+            -v "${{ github.workspace }}:/workspace" \
+            ghcr.io/kyverno/kyverno:latest kyverno test /workspace/policies || true
 
   notes:
     runs-on: ubuntu-latest
