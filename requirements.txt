@@ -1,0 +1,1 @@
+-r solutions/demo-sbom-lab/requirements.txt
