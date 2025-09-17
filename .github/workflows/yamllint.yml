@@ -20,6 +20,6 @@ jobs:
           python -m pip install yamllint
       - name: Run yamllint on workflows and recap
         run: |
-          yamllint .github/workflows || true
-          yamllint recap || true
-          yamllint solutions/demo-sbom-lab || true
+          yamllint .github/workflows
+          yamllint recap
+          yamllint solutions/demo-sbom-lab
