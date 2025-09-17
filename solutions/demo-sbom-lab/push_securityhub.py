@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Convert Trivy JSON scan results into AWS Security Hub BatchImportFindings format.
-This module mirrors the script at scripts/push-securityhub.py but provides a
-valid importable module name so unit tests can `import push_securityhub`.
+This module provides the canonical implementation for converting Trivy JSON scan results
+into AWS Security Hub BatchImportFindings format. Scripts and tests should import and use
+this module directly to avoid code duplication.
 """
 import sys
 import json
