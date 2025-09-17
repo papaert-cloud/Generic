@@ -4,8 +4,8 @@ import sys
 from pathlib import Path
 
 # Add demo-sbom-lab to sys.path for test discovery
-ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / 'solutions' / 'demo-sbom-lab'))
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 import push_securityhub as ps
 
 
