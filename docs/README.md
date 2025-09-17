@@ -1,126 +1,211 @@
-🛡️ Developer's Open Notebook
+🛡️ DevSecOps Security Lab
 
 ✨ Motivation
-Modern software supply chains need more than a passing nod to security. Vulnerabilities in third‑party dependencies, secrets committed to version control, and opaque build environments can all conspire to derail delivery. I built this portfolio to chronicle my journey towards a secure, automated pipeline that generates Software Bills of Materials (SBOMs), scans dependencies, signs container images, enforces policies at runtime and meets industry standards such as SLSA, SSDF and CIS. Rather than a polished recruiter‑facing repository, this is a developer’s open notebook: it captures why each workflow exists, how to run it locally, what to learn from it, and where you can extend it.
+
+Modern software supply chains demand end-to-end security. Vulnerabilities in third-party dependencies, secrets in version control, and opaque build environments can derail delivery and compliance.
+
+This lab is my personal journey and portfolio project (with embedded explanation snippets) — a living demonstration of how to build secure, automated pipelines that generate Software Bills of Materials (SBOMs), scan dependencies, sign and verify container images, enforce runtime policies, and align with industry frameworks such as:
+
+🏛️ Executive Order 14028 (SBOMs, supply chain integrity)
+
+🛠️ NIST Secure Software Development Framework (SSDF)
+
+🔒 Supply-chain Levels for Software Artifacts (SLSA)
+
+🧩 CIS Benchmarks and compliance baselines
+
+Each workflow is purpose-built: it explains how to run it, highlights the lessons behind it, and suggests ways to extend it. This lab serves both as lesson-learned to document my journey so-far and as a practical reference point to demonstrate applied DevSecOps practices that can be intergrated into SDLC environments. 
 
 🧩 Project Overview
-This project (AWS-SBOM-security-pipeline) demonstrates end‑to‑end DevSecOps practices in a reproducible environment:
 
-Infrastructure‑as‑Code: Provision AWS resources (S3, IAM roles, KMS keys, ECR and optional EKS) using a mix of Terraform, Terragrunt and CloudFormation. The goal is to showcase both tools and explain how each can be used for modular, multi‑account deployments.
+This project demonstrates end-to-end DevSecOps and AppSec practices in a reproducible environment:
 
-SBOM Generation and Scanning: Use Syft to generate CycloneDX and SPDX SBOMs from container images, and Grype and optional Snyk to scan them for vulnerabilities. Severity thresholds block the pipeline if Critical/High findings are present.
+Infrastructure-as-Code (IaC):
+Provision AWS resources with Terraform/Terragrunt, supporting multiple environments (dev, test, prod, sandbox).
 
-Secure Artifact Storage: Store SBOMs, scan reports and built images in a versioned S3 bucket encrypted with a KMS customer managed key. Artifacts are immutable and auditable to support SLSA/SSDF integrity requirements.
 
-Cosign Image Signing: Use Sigstore cosign to sign container images and SBOM files. Verify signatures in Kubernetes admission controllers via Kyverno policies.
+>>>>>>> SBOM Generation & Scanning:
 
-OIDC‑based CI/CD: Authenticate GitHub Actions to AWS using OpenID Connect. No long‑lived credentials live in the repository; GitHub issues a short‑lived token that the AWS Security Token Service exchanges for a role session. This satisfies least‑privilege guidance from SSDF and CIS.
+Syft for CycloneDX/SPDX SBOMs
 
-Security Hub Integration: Convert vulnerability findings to the AWS Security Finding Format (ASFF) and ingest them into AWS Security Hub. This centralizes visibility and allows you to track remediation across accounts and regions.
+Trivy/Grype/Snyk for vulnerability scans
 
-Kubernetes Runtime Enforcement: Apply Kyverno policies in a local Kind cluster (or EKS) to enforce that workloads only run images that have valid signatures and acceptable vulnerability levels. You can extend these policies to include provenance checks, SBOM validation and additional gates.
+Pipelines block on Critical/High vulnerabilities
 
-Compliance Crosswalk: A living document in docs/compliance/ maps pipeline controls to relevant sections of the Supply‑chain Levels for Software Artifacts (SLSA), the Secure Software Development Framework (SSDF) and the CIS Benchmarks. Use this during interviews to explain how each control meets industry expectations.
+
+>>>>>>>  Secure Artifact Storage:
+
+Versioned S3 buckets with KMS encryption
+
+Immutable SBOMs + scan reports for SLSA/SSDF audit integrity
+
+
+>>>>>>> Cosign Image Signing & Verification:
+
+Sign container images and SBOMs with cosign
+
+Enforce provenance in Kubernetes with Kyverno policies
+
+
+>>>>>>> OIDC-based CI/CD:
+
+GitHub → AWS OIDC federation (no static keys)
+
+Short-lived AWS STS tokens for least-privilege role sessions
+
+
+>>>>>>> Centralized Security Hub Integration:
+
+Findings normalized into ASFF (AWS Security Finding Format)
+
+Ingested into AWS Security Hub for centralized visibility
+
+
+>>>>>>> Kubernetes Runtime Enforcement:
+
+Enforce SBOM annotations + cosign signatures
+
+Reject workloads with unacceptable vulnerabilities
+
+
+Compliance Crosswalk:
+Documentation maps pipeline controls directly to EO 14028, NIST SSDF, SLSA, and CIS Benchmarks.
+
 
 🗂️ Repository Structure
-text
 .
-├── infra/            # Terraform/Terragrunt modules and CloudFormation templates
-├── pipelines/        # GitHub Actions workflows for build, scan, sign and deploy
-├── scripts/          # Helper scripts (PowerShell/Bash) for bootstrapping and repair
-├── k8s/              # Kubernetes manifests and Kyverno policies
-├── app/              # Sample application code used for demonstration
-├── docs/             # Deep‑dive explanations, compliance mapping and personal notes
-└── README.md         # This file – explains how and why
-Tip:
-Each directory contains its own README or inline comments to explain what the files do and how they interrelate. Feel free to explore.
+├── .github/workflows/   # 20+ GitHub Actions workflows for CI/CD & security
+├── config/              # Lab configuration & metadata
+├── dockers/             # Docker configurations & compose files
+├── docs/                # Documentation, runbooks & compliance mapping
+│   ├── scenario-5-security-workflows/  # End-to-end guides
+│   ├── environments/    # Environment-specific docs
+│   └── reference/       # Technical reference
+├── github-actions/      # Reusable workflow templates
+│   ├── devops/          # CI/CD workflows (build, deploy, infra)
+│   ├── devsecops/       # Security workflows (SBOM, SCA, signing)
+│   └── more-workflows/  # Additional pipeline patterns
+├── Infra/               # Terraform/Terragrunt IaC
+│   ├── environments/    # Dev/test/prod/sandbox IaC configs
+│   └── solutions/       # Solution templates
+├── solutions/           # Demo + scenario implementations
+│   ├── demo-sbom-lab/   # SBOM generation + Security Hub integration
+│   └── scenario-s003-000-secure-cicd-gha/
+├── tools/               # PowerShell automation tools
+└── scripts/             # Helper scripts for setup & ops
+
 
 🚀 Getting Started
 Prerequisites
-Environment: A Linux or WSL (Windows Subsystem for Linux) shell with Docker/Podman, Git and Node.js installed.
 
-AWS Account: Access to an AWS account with permissions to create S3 buckets, IAM roles and (optionally) EKS clusters. Choose a default region (e.g., us-east-1).
+Linux or WSL with Docker, Git, Node.js
 
-GitHub: A repository (public or private) where you can push this project. You will need admin permissions to configure OpenID Connect.
+AWS account (IAM, S3, ECR permissions)
 
-Tools: Install the following CLI tools locally or use the provided bootstrap script:
-Terraform and Terragrunt – infrastructure provisioning.
-AWS CLI – interact with AWS services.
-Syft and Grype – SBOM and vulnerability scanning.
-Cosign – sign and verify images/artifacts.
-Kyverno CLI – test policies locally.
-Kind (optional) – run a local Kubernetes cluster to test runtime policies.
+GitHub repo with admin rights for OIDC setup
+
+Tools: AWS CLI, Terraform, Syft, Grype, Cosign, Kyverno, Ansible
 
 Bootstrap
-bash
-git clone (https://github.com/papaert-cloud/Generic.git)
-cd docs-reorg
+git clone <your-repo-url>
+cd lab
+pwsh tools/ps/bootstrap.ps1 -Explain
+pwsh tools/ps/detect-tools.ps1 -Explain
 
-pwsh scripts/bootstrap/New-Lab.ps1 -Explain
-This script uses config files under config/ to determine paths and defaults. It is idempotent and can be run multiple times. The -Explain flag prints teaching notes inline so you understand each step.
-
-Inventory
-bash
-pwsh scripts/inventory/Inventory-Tools.ps1 -Explain
-Inventory your tools using the provided script. It will detect installed CLIs, VS Code extensions and WSL distributions, then recommend installations for anything missing.
-
-Provision Infrastructure
-Navigate to infra/ and follow instructions in submodule README.
-
-bash
-cd infra/base
+Infrastructure Setup
+cd Infra/environments/dev
 terraform init
-terraform apply -var "aws_region=us-east-1" -auto-approve
-Configure GitHub OIDC by creating an IAM role with a trust policy that allows your GitHub repository’s OIDC provider to assume it. The infra/github-oidc module provides an example. Update the trust policy with your repository’s ARN and push it using Terraform.
+terraform plan
+terraform apply
 
-Commit and Push
-Commit and push your changes to GitHub. Once in place, GitHub Actions workflows in the pipelines/ folder will automatically build, scan, sign and deploy your sample application on each push.
+GitHub Actions Setup
 
-🏗️ Running the Pipeline
-When you push code to your repository, GitHub Actions will execute the workflows defined in pipelines/. The major stages are:
+Configure OIDC trust relationship (see github-actions/devops/solution-02-infra-approval/)
 
-Build – compile the sample application and build a Docker image.
+Set repo secrets for AWS account/region
 
-SBOM – run syft to generate SBOMs in CycloneDX and SPDX formats.
+Push code → triggers demo-sbom-pipeline.yml
 
-Scan – run grype and (optionally) snyk to detect vulnerabilities. Fail the build if severity gates are exceeded.
+🏗️ Available Workflows
 
-Sign – use cosign to sign the image and SBOMs. Push the signature to the OCI registry.
+------ Core Security -------
 
-Publish – upload SBOMs, reports and (optionally) the image to your S3 bucket.
+demo-sbom-pipeline.yml → Full SBOM pipeline
 
-Ingest – convert vulnerability findings into ASFF and call the BatchImportFindings API for Security Hub.
+sbom-sca.yml → Software Composition Analysis
 
-Deploy – apply Kubernetes manifests and Kyverno policies to your cluster. Only signed images with acceptable vulnerabilities will run.
+sign-and-push.yml → Image signing (cosign)
 
-Each step is annotated with comments and includes environment variables for customization. See the workflow YAML files for details.
+scan-to-securityhub.yml → Security Hub integration
 
-📚 Learning Roadmap
-This notebook is meant for continual learning. Start small by running the bootstrap and inventory scripts, then move on to provisioning the minimal infrastructure. Once comfortable, explore SBOM generation and scanning locally. As you become confident with the tools, enable cosign signing and Security Hub ingestion. Finally, test Kyverno policies in Kind or EKS. Feel free to branch off and add new scenarios (e.g., adding SBOM validation to serverless applications or integrating source composition analysis). Use the Cue Learn command in your interactive prompts to ask for deep‑dive teaching sessions on any of these components.
+------ Infrastructure -------
 
-⚡ Extending the Portfolio
-This project is intentionally modular. Here are a few ideas for extension:
+terraform-plan.yml / terraform-apply.yml → IaC deployments
 
-Add additional scanners such as Trivy for container image scanning or Semgrep for SAST.
+drift-detection.yml → Drift monitoring
 
-Support multiple clouds by adding Terraform modules for Azure or GCP equivalents of S3, KMS and OIDC roles.
+------ Code Security -------
 
-Integrate policy as code frameworks like Open Policy Agent (OPA) or Datree alongside Kyverno.
+codeql-analysis.yml → GitHub CodeQL
 
-Automate remediation by wiring Security Hub findings into chat or ticketing systems.
+semgrep-scan.yml → SAST scanning
 
-Expand compliance mapping to frameworks like ISO/IEC 27001 or NIST 800‑53.
+dast-zap.yml → DAST with OWASP ZAP
 
-Please open an issue or pull request if you would like to contribute.
+sonar-scan.yml → Code quality
 
-❓ Getting Help
-If you encounter problems or want to learn more about a particular component, you can:
+ ------- Ops & Maintenance ------ 
 
-Read the documentation in the docs/ directory or run scripts with the -Explain flag to print inline teaching notes.
+dependency-updates.yml → Automated updates
 
-Use the Cue Technical command in your interactive session to request a step‑by‑step guide on any topic.
+nightly-sbom-rescan.yml → Scheduled scans
 
-Search official vendor documentation (Terraform, AWS, Kyverno, Sigstore) for deeper reference.
+canary-deploy.yml → Progressive deployment
+
+📚 Learning Path
+
+- Start with docs/scenario-5-security-workflows/00_overview.md
+
+- Explore solutions under solutions/demo-sbom-lab/
+
+- Deploy infrastructure with Infra/environments/
+
+- Run workflows under .github/workflows/
+
+- Map results to SLSA/SSDF/CIS compliance docs
+
+⚡ Extending the Lab
+
++ Add new scanners (Bandit, Checkov)
+
++ Extend Terraform to Azure/GCP (multi-cloud)
+
++ Integrate OPA/Datree alongside Kyverno
+
++ Expand compliance docs (ISO 27001, PCI-DSS)
+
++ Automate ticketing via Security Hub → Jira/Slack
+
+🔧 Tools & Technologies
+
+Security: Syft, Grype, Trivy, Snyk, Cosign, Kyverno, Semgrep, CodeQL, OWASP ZAP
+Infrastructure: Terraform, Ansible, AWS (S3, ECR, IAM, KMS, Security Hub, Config)
+CI/CD: GitHub Actions (OIDC → AWS), GitAction, Jenkins (optional)
+Containers: Docker, Kubernetes (kind, EKS pilot)
+Languages: Python, PowerShell, Bash, HCL
+
+🎯 Why This Matters (My Journey)
+
+This repo is not just code — it reflects my journey into advanced Application Security and Cloud Security Engineering:
+
+Started with system administration (Windows/Linux/Active Directory).
+
+Introduced AWS basics and automation.
+
+Advanced into DevSecOps pipelines, IaC security, SBOM tooling.
+
+Today: building federal-grade, compliance-ready pipelines aligned with EO 14028 and NIST SSDF.
 
 📜 License
-This project is licensed under the MIT License. Feel free to use and adapt it for your own learning and professional development.
+
+MIT License — Feel free to use and adapt for learning, research, or professional development.
