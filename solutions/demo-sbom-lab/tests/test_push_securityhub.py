@@ -3,10 +3,24 @@ import os
 import sys
 from pathlib import Path
 
-# Add demo-sbom-lab to sys.path for test discovery
-ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / 'solutions' / 'demo-sbom-lab'))
-import push_securityhub as ps
+# Add demo-sbom-lab and its scripts dir to sys.path for test discovery
+# parents[3] points to the repository root from this test path, so use that
+ROOT = Path(__file__).resolve().parents[3]
+DEMO_DIR = ROOT / 'solutions' / 'demo-sbom-lab'
+# Ensure the scripts directory (contains push-securityhub.py) is found first,
+# then the package directory. This covers both local dev and CI layouts.
+sys.path.insert(0, str(DEMO_DIR / 'scripts'))
+sys.path.insert(0, str(DEMO_DIR))
+try:
+    import push_securityhub as ps
+except Exception:
+    # Pytest collection environments may behave differently. Fall back to
+    # loading the script directly from the scripts folder by path so tests
+    # can still run when imports fail.
+    from importlib.machinery import SourceFileLoader
+    script_path = DEMO_DIR / 'scripts' / 'push-securityhub.py'
+    _mod = SourceFileLoader('push_securityhub_fallback', str(script_path)).load_module()
+    ps = _mod
 
 
 SAMPLE_TRIVY = {
