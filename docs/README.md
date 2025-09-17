@@ -24,7 +24,7 @@ Infrastructure-as-Code (IaC):
 Provision AWS resources with Terraform/Terragrunt, supporting multiple environments (dev, test, prod, sandbox).
 
 
->>>>>>> SBOM Generation & Scanning:
+> SBOM Generation & Scanning:
 
 Syft for CycloneDX/SPDX SBOMs
 
