@@ -15,12 +15,21 @@ jobs:
           go-version: '1.20'
       - name: Go fmt check
         run: |
-          gofmt_out=$(gofmt -l . || true)
-          if [ -n "$gofmt_out" ]; then
-            echo "Files not gofmt'd:\n$gofmt_out"; exit 1
+          if ls **/*.go >/dev/null 2>&1; then
+            gofmt_out=$(gofmt -l . || true)
+            if [ -n "$gofmt_out" ]; then
+              echo "Files not gofmt'd:\n$gofmt_out"; exit 1
+            fi
+          else
+            echo "No Go files detected; skipping gofmt check"
           fi
       - name: Run go vet
-        run: go vet ./...
+        run: |
+          if ls **/*.go >/dev/null 2>&1; then
+            go vet ./...
+          else
+            echo "No Go files detected; skipping go vet"
+          fi
       - name: Run bandit (python)
         run: |
           if command -v bandit >/dev/null 2>&1; then
