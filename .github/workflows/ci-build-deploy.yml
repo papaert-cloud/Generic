@@ -1,10 +1,13 @@
+---
 name: CI Build & Deploy
-
 on:
   push:
-    branches: [ 'main' ]
+    branches:
+      - main
   pull_request:
-    branches: [ 'main' ]
+    branches:
+      - main
+  workflow_dispatch: true
 
 env:
   AWS_REGION: us-east-1
@@ -17,6 +20,9 @@ permissions:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    env:
+      AWS_ROLE_ECR: >
+        arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsECRPush
     steps:
       - uses: actions/checkout@v4
 
@@ -26,24 +32,36 @@ jobs:
           go-version: '1.20'
 
       - name: Run unit tests
-        run: go test ./... -v
+        run: |
+          if [ -f go.mod ] && ls **/*.go >/dev/null 2>&1; then
+            go test ./... -v
+          else
+            echo "No go.mod or Go files found; skipping unit tests"
+          fi
 
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsECRPush  # create this role in your account with ECR push perms and OIDC trust
+          # create this role in your account with ECR push perms and OIDC trust
+          role-to-assume: ${{ env.AWS_ROLE_ECR }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Build and push image
         run: |
           mkdir -p artifacts
-          ./github-actions/devops/solution-01-ci-build-deploy/scripts/build_and_push.sh --tag ${{ github.sha }}
+          BUILD_BASE: >
+            ./github-actions/devops/solution-01-ci-build-deploy/scripts
+          BUILD_SCRIPT=${BUILD_BASE}/build_and_push.sh
+          ${BUILD_SCRIPT} --tag "${{ github.sha }}"
 
       - name: Upload SBOM & metadata to S3 (artifact storage)
         run: |
-          # This step assumes the `build_and_push.sh` wrote artifacts/sbom.cyclonedx.json
+          # This step assumes the build script
+          # wrote artifacts/sbom.cyclonedx.json
           if [ -f artifacts/sbom.cyclonedx.json ]; then
-            aws s3 cp artifacts/sbom.cyclonedx.json s3://your-artifact-bucket/${{ github.run_id }}/sbom.cyclonedx.json
+            ART_BASE=s3://your-artifact-bucket/${{ github.run_id }}
+            aws s3 cp artifacts/sbom.cyclonedx.json \
+              ${ART_BASE}/sbom.cyclonedx.json
           else
             echo "No SBOM found"
           fi

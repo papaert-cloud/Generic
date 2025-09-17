@@ -1,7 +1,7 @@
+---
 name: Canary Deployment
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: true
 
 jobs:
   canary:
@@ -13,4 +13,6 @@ jobs:
           # Implement with kubectl / argo rollouts / flagger
           echo "Trigger canary rollout using configured tool (kubectl/argo)"
       - name: Monitor metrics
-        run: echo "Monitor via CloudWatch or Prometheus; rollback if errors detected"
+        run: |
+          echo "Monitor via CloudWatch or Prometheus"
+          echo "Rollback if errors detected"

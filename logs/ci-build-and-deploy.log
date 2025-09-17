@@ -1,0 +1,200 @@
+build-and-test	UNKNOWN STEP	﻿2025-09-17T04:25:27.3875521Z Current runner version: '2.328.0'
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3907238Z ##[group]Runner Image Provisioner
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3908825Z Hosted Compute Agent
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3909773Z Version: 20250912.392
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3910773Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3911907Z Build Date: 2025-09-12T15:23:14Z
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3913084Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3914021Z ##[group]Operating System
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3915136Z Ubuntu
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3915972Z 24.04.3
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3916835Z LTS
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3918053Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3918903Z ##[group]Runner Image
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3919890Z Image: ubuntu-24.04
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3920984Z Version: 20250915.37.1
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3922824Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250915.37/images/ubuntu/Ubuntu2404-Readme.md
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3925758Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250915.37
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3927406Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3929480Z ##[group]GITHUB_TOKEN Permissions
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3931983Z Contents: read
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3933025Z Metadata: read
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3933910Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3937026Z Secret source: Actions
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.3938556Z Prepare workflow directory
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.4494281Z Prepare all required actions
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.4551676Z Getting action download info
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.6905909Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:27.7646655Z Download action repository 'actions/setup-go@v4' (SHA:19bb51245e9c80abacb2e91cc42b33fa478b8639)
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.0666236Z Download action repository 'aws-actions/configure-aws-credentials@v2' (SHA:5fd3084fc36e372ff1fff382a39b10d03659f355)
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.3962998Z Complete job name: build-and-test
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4661901Z ##[group]Run actions/checkout@v4
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4662774Z with:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4663244Z   repository: papaert-cloud/Generic
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4663934Z   token: ***
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4664329Z   ssh-strict: true
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4664738Z   ssh-user: git
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4665153Z   persist-credentials: true
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4665625Z   clean: true
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4666056Z   sparse-checkout-cone-mode: true
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4666561Z   fetch-depth: 1
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4666959Z   fetch-tags: false
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4667386Z   show-progress: true
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4667982Z   lfs: false
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4668381Z   submodules: false
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4668818Z   set-safe-directory: true
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4669575Z env:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4669964Z   AWS_REGION: us-east-1
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4670430Z   AWS_ACCOUNT_ID: 5965605891
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.4670889Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5728113Z Syncing repository: papaert-cloud/Generic
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5730221Z ##[group]Getting Git version info
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5730963Z Working directory is '/home/runner/work/Generic/Generic'
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5732093Z [command]/usr/bin/git version
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5773170Z git version 2.51.0
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5798701Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5815101Z Temporarily overriding HOME='/home/runner/work/_temp/88aba687-e63b-467d-9e25-4cc6b4914df2' before making global git config changes
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5818055Z Adding repository directory to the temporary git global config as a safe directory
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5821368Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5854659Z Deleting the contents of '/home/runner/work/Generic/Generic'
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5858227Z ##[group]Initializing the repository
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5862216Z [command]/usr/bin/git init /home/runner/work/Generic/Generic
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5936865Z hint: Using 'master' as the name for the initial branch. This default branch name
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5939342Z hint: is subject to change. To configure the initial branch name to use in all
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5941253Z hint: of your new repositories, which will suppress this warning, call:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5942347Z hint:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5942860Z hint: 	git config --global init.defaultBranch <name>
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5943474Z hint:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5944041Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5944990Z hint: 'development'. The just-created branch can be renamed via this command:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5945834Z hint:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5946489Z hint: 	git branch -m <name>
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5947137Z hint:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5947950Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5949001Z Initialized empty Git repository in /home/runner/work/Generic/Generic/.git/
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5951909Z [command]/usr/bin/git remote add origin https://github.com/papaert-cloud/Generic
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5990291Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5991441Z ##[group]Disabling automatic garbage collection
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.5995073Z [command]/usr/bin/git config --local gc.auto 0
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.6024250Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.6025725Z ##[group]Setting up auth
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.6031821Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.6062846Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.6330008Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.6357936Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.6583151Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.6616821Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.6618749Z ##[group]Fetching the repository
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:28.6627067Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e381d3bfe93ebfc03c956362c6311d1dca33b42d:refs/remotes/pull/2/merge
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.1978441Z From https://github.com/papaert-cloud/Generic
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.1982122Z  * [new ref]         e381d3bfe93ebfc03c956362c6311d1dca33b42d -> pull/2/merge
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.2008205Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.2010092Z ##[group]Determining the checkout info
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.2012123Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.2016318Z [command]/usr/bin/git sparse-checkout disable
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.2056142Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.2084359Z ##[group]Checking out the ref
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.2087323Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4667546Z Note: switching to 'refs/remotes/pull/2/merge'.
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4669267Z 
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4670379Z You are in 'detached HEAD' state. You can look around, make experimental
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4673254Z changes and commit them, and you can discard any commits you make in this
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4676323Z state without impacting any branches by switching back to a branch.
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4678406Z 
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4679493Z If you want to create a new branch to retain commits you create, you may
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4682136Z do so (now or later) by using -c with the switch command. Example:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4683727Z 
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4684263Z   git switch -c <new-branch-name>
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4685312Z 
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4685810Z Or undo this operation with:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4686739Z 
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4687173Z   git switch -
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4688103Z 
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4689422Z Turn off this advice by setting config variable advice.detachedHead to false
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4691421Z 
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4694063Z HEAD is now at e381d3b Merge c1835627eb006b48e2e280a88528f4b34e779668 into eaf6367481144ac9db3594c8a5dad10b51e32afb
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4700878Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4726456Z [command]/usr/bin/git log -1 --format=%H
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.4751312Z e381d3bfe93ebfc03c956362c6311d1dca33b42d
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.5027038Z ##[group]Run actions/setup-go@v4
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.5028151Z with:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.5028839Z   go-version: 1.20
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.5029615Z   check-latest: false
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.5030705Z   token: ***
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.5031407Z   cache: true
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.5032115Z env:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.5032796Z   AWS_REGION: us-east-1
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.5033642Z   AWS_ACCOUNT_ID: 5965605891
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.5034530Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.6605335Z Setup go version spec 1.20
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:29.6871521Z Attempting to download 1.20...
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:30.0197254Z matching 1.20...
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:30.0246031Z Acquiring 1.20.14 from https://github.com/actions/go-versions/releases/download/1.20.14-7809684997/go-1.20.14-linux-x64.tar.gz
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:30.7444584Z Extracting Go...
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:30.7553835Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/bca9bd15-d2d5-4465-9719-52fe36a9f51f -f /home/runner/work/_temp/1fac3793-f2c5-40d2-9fce-7a0469b53fff
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:32.4516654Z Successfully extracted go to /home/runner/work/_temp/bca9bd15-d2d5-4465-9719-52fe36a9f51f
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:32.4517237Z Adding to the cache ...
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3475577Z Successfully cached go to /opt/hostedtoolcache/go/1.20.14/x64
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3477439Z Added go to the path
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3479554Z Successfully set up Go version 1.20
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3718658Z [command]/opt/hostedtoolcache/go/1.20.14/x64/bin/go env GOMODCACHE
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3751056Z [command]/opt/hostedtoolcache/go/1.20.14/x64/bin/go env GOCACHE
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3786374Z /home/runner/go/pkg/mod
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3806948Z /home/runner/.cache/go-build
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3838330Z ##[warning]Restore cache failed: Dependencies file is not found in /home/runner/work/Generic/Generic. Supported file pattern: go.sum
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3867260Z go version go1.20.14 linux/amd64
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3867478Z 
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.3868061Z ##[group]go env
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4980348Z GO111MODULE=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4980905Z GOARCH="amd64"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4981229Z GOBIN=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4981590Z GOCACHE="/home/runner/.cache/go-build"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4982041Z GOENV="/home/runner/.config/go/env"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4982419Z GOEXE=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4982719Z GOEXPERIMENT=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4983021Z GOFLAGS=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4983307Z GOHOSTARCH="amd64"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4983606Z GOHOSTOS="linux"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4983903Z GOINSECURE=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4984235Z GOMODCACHE="/home/runner/go/pkg/mod"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4984629Z GONOPROXY=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4984923Z GONOSUMDB=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4985221Z GOOS="linux"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4985556Z GOPATH="/home/runner/go"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4985915Z GOPRIVATE=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.4986286Z GOPROXY="https://proxy.golang.org,direct"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5070153Z GOROOT="/opt/hostedtoolcache/go/1.20.14/x64"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5070713Z GOSUMDB="sum.golang.org"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5071149Z GOTMPDIR=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5071708Z GOTOOLDIR="/opt/hostedtoolcache/go/1.20.14/x64/pkg/tool/linux_amd64"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5072289Z GOVCS=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5072595Z GOVERSION="go1.20.14"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5072993Z GCCGO="gccgo"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5073292Z GOAMD64="v1"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5073608Z AR="ar"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5073881Z CC="gcc"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5074145Z CXX="g++"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5074422Z CGO_ENABLED="1"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5074717Z GOMOD="/dev/null"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5075010Z GOWORK=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5075296Z CGO_CFLAGS="-O2 -g"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5075605Z CGO_CPPFLAGS=""
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5075916Z CGO_CXXFLAGS="-O2 -g"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5076260Z CGO_FFLAGS="-O2 -g"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5076880Z CGO_LDFLAGS="-O2 -g"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5077217Z PKG_CONFIG="pkg-config"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5078475Z GOGCCFLAGS="-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build3742084494=/tmp/go-build -gno-record-gcc-switches"
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5079625Z 
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5080128Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5192844Z ##[group]Run go test ./... -v
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5193307Z [36;1mgo test ./... -v[0m
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5261497Z shell: /usr/bin/bash -e {0}
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5261866Z env:
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5262145Z   AWS_REGION: us-east-1
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5262483Z   AWS_ACCOUNT_ID: 5965605891
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5262832Z ##[endgroup]
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5377405Z pattern ./...: directory prefix . does not contain main module or its selected dependencies
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5389268Z ##[error]Process completed with exit code 1.
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.5482303Z Post job cleanup.
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.6468988Z [command]/usr/bin/git version
+build-and-test	UNKNOWN STEP	2025-09-17T04:25:36.6510605Z git version 2.51.0

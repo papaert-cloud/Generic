@@ -1,0 +1,210 @@
+build-and-test	Set up job	﻿2025-09-17T06:13:56.6819534Z Current runner version: '2.328.0'
+build-and-test	Set up job	2025-09-17T06:13:56.6844156Z ##[group]Runner Image Provisioner
+build-and-test	Set up job	2025-09-17T06:13:56.6844931Z Hosted Compute Agent
+build-and-test	Set up job	2025-09-17T06:13:56.6845585Z Version: 20250829.383
+build-and-test	Set up job	2025-09-17T06:13:56.6846170Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+build-and-test	Set up job	2025-09-17T06:13:56.6846886Z Build Date: 2025-08-29T13:48:48Z
+build-and-test	Set up job	2025-09-17T06:13:56.6847558Z ##[endgroup]
+build-and-test	Set up job	2025-09-17T06:13:56.6848087Z ##[group]Operating System
+build-and-test	Set up job	2025-09-17T06:13:56.6848680Z Ubuntu
+build-and-test	Set up job	2025-09-17T06:13:56.6849168Z 24.04.3
+build-and-test	Set up job	2025-09-17T06:13:56.6849657Z LTS
+build-and-test	Set up job	2025-09-17T06:13:56.6850083Z ##[endgroup]
+build-and-test	Set up job	2025-09-17T06:13:56.6850676Z ##[group]Runner Image
+build-and-test	Set up job	2025-09-17T06:13:56.6851409Z Image: ubuntu-24.04
+build-and-test	Set up job	2025-09-17T06:13:56.6851931Z Version: 20250907.24.1
+build-and-test	Set up job	2025-09-17T06:13:56.6852976Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+build-and-test	Set up job	2025-09-17T06:13:56.6854369Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+build-and-test	Set up job	2025-09-17T06:13:56.6855552Z ##[endgroup]
+build-and-test	Set up job	2025-09-17T06:13:56.6856605Z ##[group]GITHUB_TOKEN Permissions
+build-and-test	Set up job	2025-09-17T06:13:56.6858665Z Contents: read
+build-and-test	Set up job	2025-09-17T06:13:56.6859637Z Metadata: read
+build-and-test	Set up job	2025-09-17T06:13:56.6860119Z ##[endgroup]
+build-and-test	Set up job	2025-09-17T06:13:56.6862287Z Secret source: Actions
+build-and-test	Set up job	2025-09-17T06:13:56.6863370Z Prepare workflow directory
+build-and-test	Set up job	2025-09-17T06:13:56.7246232Z Prepare all required actions
+build-and-test	Set up job	2025-09-17T06:13:56.7283143Z Getting action download info
+build-and-test	Set up job	2025-09-17T06:13:57.0806945Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+build-and-test	Set up job	2025-09-17T06:13:57.2414799Z Download action repository 'actions/setup-go@v4' (SHA:19bb51245e9c80abacb2e91cc42b33fa478b8639)
+build-and-test	Set up job	2025-09-17T06:13:57.7826110Z Download action repository 'aws-actions/configure-aws-credentials@v2' (SHA:5fd3084fc36e372ff1fff382a39b10d03659f355)
+build-and-test	Set up job	2025-09-17T06:13:58.3528225Z Complete job name: build-and-test
+build-and-test	Run actions/checkout@v4	﻿2025-09-17T06:13:58.4343138Z ##[group]Run actions/checkout@v4
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4344722Z with:
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4345540Z   repository: papaert-cloud/Generic
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4346823Z   token: ***
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4347559Z   ssh-strict: true
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4348313Z   ssh-user: git
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4349082Z   persist-credentials: true
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4349935Z   clean: true
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4350720Z   sparse-checkout-cone-mode: true
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4351837Z   fetch-depth: 1
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4352586Z   fetch-tags: false
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4353368Z   show-progress: true
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4354148Z   lfs: false
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4354848Z   submodules: false
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4355638Z   set-safe-directory: true
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4356756Z env:
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4357451Z   AWS_REGION: us-east-1
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4358265Z   AWS_ACCOUNT_ID: 5965605891
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.4359110Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5432971Z Syncing repository: papaert-cloud/Generic
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5435866Z ##[group]Getting Git version info
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5437994Z Working directory is '/home/runner/work/Generic/Generic'
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5440701Z [command]/usr/bin/git version
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5512542Z git version 2.51.0
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5538681Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5552683Z Temporarily overriding HOME='/home/runner/work/_temp/5dc6956a-987e-4cb4-b462-bffa703dc877' before making global git config changes
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5555514Z Adding repository directory to the temporary git global config as a safe directory
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5558177Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5595270Z Deleting the contents of '/home/runner/work/Generic/Generic'
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5598549Z ##[group]Initializing the repository
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5602845Z [command]/usr/bin/git init /home/runner/work/Generic/Generic
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5706072Z hint: Using 'master' as the name for the initial branch. This default branch name
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5708554Z hint: is subject to change. To configure the initial branch name to use in all
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5712254Z hint: of your new repositories, which will suppress this warning, call:
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5713910Z hint:
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5714861Z hint: 	git config --global init.defaultBranch <name>
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5716004Z hint:
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5717398Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5719353Z hint: 'development'. The just-created branch can be renamed via this command:
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5720759Z hint:
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5722048Z hint: 	git branch -m <name>
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5723275Z hint:
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5724470Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5726392Z Initialized empty Git repository in /home/runner/work/Generic/Generic/.git/
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5729456Z [command]/usr/bin/git remote add origin https://github.com/papaert-cloud/Generic
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5760426Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5762017Z ##[group]Disabling automatic garbage collection
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5763768Z [command]/usr/bin/git config --local gc.auto 0
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5791984Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5793288Z ##[group]Setting up auth
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5798004Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.5828635Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.6162054Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.6194377Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.6411560Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.6444676Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.6447016Z ##[group]Fetching the repository
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:58.6456546Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +69cb9140b0f2183b6658445de5aae5df7c564c6e:refs/remotes/pull/4/merge
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.3684874Z From https://github.com/papaert-cloud/Generic
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.3686740Z  * [new ref]         69cb9140b0f2183b6658445de5aae5df7c564c6e -> pull/4/merge
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.3720061Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.3722489Z ##[group]Determining the checkout info
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.3724994Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.3728166Z [command]/usr/bin/git sparse-checkout disable
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.3770113Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.3799526Z ##[group]Checking out the ref
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.3802997Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/4/merge
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6275425Z Note: switching to 'refs/remotes/pull/4/merge'.
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6277442Z 
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6278804Z You are in 'detached HEAD' state. You can look around, make experimental
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6283807Z changes and commit them, and you can discard any commits you make in this
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6286791Z state without impacting any branches by switching back to a branch.
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6288587Z 
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6289670Z If you want to create a new branch to retain commits you create, you may
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6292435Z do so (now or later) by using -c with the switch command. Example:
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6293948Z 
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6294510Z   git switch -c <new-branch-name>
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6295523Z 
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6296049Z Or undo this operation with:
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6296975Z 
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6297431Z   git switch -
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6298119Z 
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6299290Z Turn off this advice by setting config variable advice.detachedHead to false
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6301387Z 
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6303764Z HEAD is now at 69cb914 Merge 379d670590656498882307987b62cc76cf2116cd into b1fa9b563261d4d6cd806f081976006c7aa1a811
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6307587Z ##[endgroup]
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6328307Z [command]/usr/bin/git log -1 --format=%H
+build-and-test	Run actions/checkout@v4	2025-09-17T06:13:59.6350019Z 69cb9140b0f2183b6658445de5aae5df7c564c6e
+build-and-test	Set up Go	﻿2025-09-17T06:13:59.6619390Z ##[group]Run actions/setup-go@v4
+build-and-test	Set up Go	2025-09-17T06:13:59.6620343Z with:
+build-and-test	Set up Go	2025-09-17T06:13:59.6621335Z   go-version: 1.20
+build-and-test	Set up Go	2025-09-17T06:13:59.6622220Z   check-latest: false
+build-and-test	Set up Go	2025-09-17T06:13:59.6623235Z   token: ***
+build-and-test	Set up Go	2025-09-17T06:13:59.6624012Z   cache: true
+build-and-test	Set up Go	2025-09-17T06:13:59.6624725Z env:
+build-and-test	Set up Go	2025-09-17T06:13:59.6625447Z   AWS_REGION: us-east-1
+build-and-test	Set up Go	2025-09-17T06:13:59.6626247Z   AWS_ACCOUNT_ID: 5965605891
+build-and-test	Set up Go	2025-09-17T06:13:59.6627142Z ##[endgroup]
+build-and-test	Set up Go	2025-09-17T06:13:59.8127499Z Setup go version spec 1.20
+build-and-test	Set up Go	2025-09-17T06:13:59.8200710Z Attempting to download 1.20...
+build-and-test	Set up Go	2025-09-17T06:14:00.4020178Z matching 1.20...
+build-and-test	Set up Go	2025-09-17T06:14:00.4067819Z Acquiring 1.20.14 from https://github.com/actions/go-versions/releases/download/1.20.14-7809684997/go-1.20.14-linux-x64.tar.gz
+build-and-test	Set up Go	2025-09-17T06:14:01.2057757Z Extracting Go...
+build-and-test	Set up Go	2025-09-17T06:14:01.2236289Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/ec57ec23-8418-40d2-a689-02c43ba41736 -f /home/runner/work/_temp/f4b86776-e2f1-4598-af51-6eac04250526
+build-and-test	Set up Go	2025-09-17T06:14:02.8851169Z Successfully extracted go to /home/runner/work/_temp/ec57ec23-8418-40d2-a689-02c43ba41736
+build-and-test	Set up Go	2025-09-17T06:14:02.8852227Z Adding to the cache ...
+build-and-test	Set up Go	2025-09-17T06:14:06.7704324Z Successfully cached go to /opt/hostedtoolcache/go/1.20.14/x64
+build-and-test	Set up Go	2025-09-17T06:14:06.7706419Z Added go to the path
+build-and-test	Set up Go	2025-09-17T06:14:06.7708051Z Successfully set up Go version 1.20
+build-and-test	Set up Go	2025-09-17T06:14:06.7893057Z [command]/opt/hostedtoolcache/go/1.20.14/x64/bin/go env GOMODCACHE
+build-and-test	Set up Go	2025-09-17T06:14:06.7920305Z [command]/opt/hostedtoolcache/go/1.20.14/x64/bin/go env GOCACHE
+build-and-test	Set up Go	2025-09-17T06:14:06.7952392Z /home/runner/go/pkg/mod
+build-and-test	Set up Go	2025-09-17T06:14:06.7970437Z /home/runner/.cache/go-build
+build-and-test	Set up Go	2025-09-17T06:14:06.7997045Z ##[warning]Restore cache failed: Dependencies file is not found in /home/runner/work/Generic/Generic. Supported file pattern: go.sum
+build-and-test	Set up Go	2025-09-17T06:14:06.8022004Z go version go1.20.14 linux/amd64
+build-and-test	Set up Go	2025-09-17T06:14:06.8022405Z 
+build-and-test	Set up Go	2025-09-17T06:14:06.8023007Z ##[group]go env
+build-and-test	Set up Go	2025-09-17T06:14:06.9193089Z GO111MODULE=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9193710Z GOARCH="amd64"
+build-and-test	Set up Go	2025-09-17T06:14:06.9195362Z GOBIN=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9195896Z GOCACHE="/home/runner/.cache/go-build"
+build-and-test	Set up Go	2025-09-17T06:14:06.9196461Z GOENV="/home/runner/.config/go/env"
+build-and-test	Set up Go	2025-09-17T06:14:06.9196942Z GOEXE=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9197369Z GOEXPERIMENT=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9197878Z GOFLAGS=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9198324Z GOHOSTARCH="amd64"
+build-and-test	Set up Go	2025-09-17T06:14:06.9198661Z GOHOSTOS="linux"
+build-and-test	Set up Go	2025-09-17T06:14:06.9198929Z GOINSECURE=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9199348Z GOMODCACHE="/home/runner/go/pkg/mod"
+build-and-test	Set up Go	2025-09-17T06:14:06.9199686Z GONOPROXY=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9199982Z GONOSUMDB=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9200335Z GOOS="linux"
+build-and-test	Set up Go	2025-09-17T06:14:06.9200683Z GOPATH="/home/runner/go"
+build-and-test	Set up Go	2025-09-17T06:14:06.9201235Z GOPRIVATE=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9263178Z GOPROXY="https://proxy.golang.org,direct"
+build-and-test	Set up Go	2025-09-17T06:14:06.9263623Z GOROOT="/opt/hostedtoolcache/go/1.20.14/x64"
+build-and-test	Set up Go	2025-09-17T06:14:06.9263941Z GOSUMDB="sum.golang.org"
+build-and-test	Set up Go	2025-09-17T06:14:06.9264192Z GOTMPDIR=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9264546Z GOTOOLDIR="/opt/hostedtoolcache/go/1.20.14/x64/pkg/tool/linux_amd64"
+build-and-test	Set up Go	2025-09-17T06:14:06.9264888Z GOVCS=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9265089Z GOVERSION="go1.20.14"
+build-and-test	Set up Go	2025-09-17T06:14:06.9265322Z GCCGO="gccgo"
+build-and-test	Set up Go	2025-09-17T06:14:06.9265502Z GOAMD64="v1"
+build-and-test	Set up Go	2025-09-17T06:14:06.9265672Z AR="ar"
+build-and-test	Set up Go	2025-09-17T06:14:06.9265850Z CC="gcc"
+build-and-test	Set up Go	2025-09-17T06:14:06.9266012Z CXX="g++"
+build-and-test	Set up Go	2025-09-17T06:14:06.9266186Z CGO_ENABLED="1"
+build-and-test	Set up Go	2025-09-17T06:14:06.9266398Z GOMOD="/dev/null"
+build-and-test	Set up Go	2025-09-17T06:14:06.9266601Z GOWORK=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9266786Z CGO_CFLAGS="-O2 -g"
+build-and-test	Set up Go	2025-09-17T06:14:06.9266979Z CGO_CPPFLAGS=""
+build-and-test	Set up Go	2025-09-17T06:14:06.9267169Z CGO_CXXFLAGS="-O2 -g"
+build-and-test	Set up Go	2025-09-17T06:14:06.9267364Z CGO_FFLAGS="-O2 -g"
+build-and-test	Set up Go	2025-09-17T06:14:06.9267851Z CGO_LDFLAGS="-O2 -g"
+build-and-test	Set up Go	2025-09-17T06:14:06.9268060Z PKG_CONFIG="pkg-config"
+build-and-test	Set up Go	2025-09-17T06:14:06.9268824Z GOGCCFLAGS="-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build3582655081=/tmp/go-build -gno-record-gcc-switches"
+build-and-test	Set up Go	2025-09-17T06:14:06.9269708Z 
+build-and-test	Set up Go	2025-09-17T06:14:06.9270359Z ##[endgroup]
+build-and-test	Run unit tests	﻿2025-09-17T06:14:06.9371966Z ##[group]Run go test ./... -v
+build-and-test	Run unit tests	2025-09-17T06:14:06.9372306Z [36;1mgo test ./... -v[0m
+build-and-test	Run unit tests	2025-09-17T06:14:06.9428348Z shell: /usr/bin/bash -e {0}
+build-and-test	Run unit tests	2025-09-17T06:14:06.9428617Z env:
+build-and-test	Run unit tests	2025-09-17T06:14:06.9428804Z   AWS_REGION: us-east-1
+build-and-test	Run unit tests	2025-09-17T06:14:06.9429024Z   AWS_ACCOUNT_ID: 5965605891
+build-and-test	Run unit tests	2025-09-17T06:14:06.9429244Z ##[endgroup]
+build-and-test	Run unit tests	2025-09-17T06:14:06.9530413Z pattern ./...: directory prefix . does not contain main module or its selected dependencies
+build-and-test	Run unit tests	2025-09-17T06:14:06.9542630Z ##[error]Process completed with exit code 1.
+build-and-test	Post Run actions/checkout@v4	﻿2025-09-17T06:14:06.9639412Z Post job cleanup.
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.0546261Z [command]/usr/bin/git version
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.0582002Z git version 2.51.0
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.0629859Z Temporarily overriding HOME='/home/runner/work/_temp/9a5153f1-2a65-4fbe-aa75-867b132650f1' before making global git config changes
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.0631436Z Adding repository directory to the temporary git global config as a safe directory
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.0636033Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.0669229Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.0700881Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.0928780Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.0948583Z http.https://github.com/.extraheader
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.0961347Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build-and-test	Post Run actions/checkout@v4	2025-09-17T06:14:07.1005851Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-and-test	Complete job	﻿2025-09-17T06:14:07.1371768Z Cleaning up orphan processes

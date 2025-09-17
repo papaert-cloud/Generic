@@ -1,7 +1,8 @@
+---
 name: Secure CICD GHA - build & deploy (example)
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: true
   push:
     branches:
       - main
@@ -23,8 +24,10 @@ jobs:
         env:
           AWS_REGION: us-east-1
         run: |
-          cd Infra/solutions/scenario-s003-000-secure-cicd-gha
-          ./upload.sh ${{ secrets.LAMBDA_DEPLOY_BUCKET }} remediate/remediate.zip
+          WORKDIR=Infra/solutions/scenario-s003-000-secure-cicd-gha
+          cd ${WORKDIR}
+          ./upload.sh \
+            "${{ secrets.LAMBDA_DEPLOY_BUCKET }}" remediate/remediate.zip
 
   tf-lint-validate:
     runs-on: ubuntu-latest
@@ -33,7 +36,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: terraform fmt and validate
-        working-directory: Infra/solutions/scenario-s003-000-secure-cicd-gha/terraform
+        env:
+          WORK_TF_DIR: >-
+            Infra/solutions/scenario-s003-000-secure-cicd-gha/
+            terraform
+        working-directory: ${{ env.WORK_TF_DIR }}
         run: |
           terraform init -input=false
           terraform fmt -recursive
@@ -52,9 +59,15 @@ jobs:
       - name: Install Terraform and Terragrunt
         run: |
           sudo apt-get update && sudo apt-get install -y unzip
-          curl -Lo tf.zip https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
+          TF_URL_BASE: >
+            https://releases.hashicorp.com/terraform/1.6.0
+          TF_URL=${TF_URL_BASE}/terraform_1.6.0_linux_amd64.zip
+          curl -Lo tf.zip ${TF_URL}
           unzip tf.zip -d /usr/local/bin
-          curl -Lo terragrunt https://github.com/gruntwork-io/terragrunt/releases/download/v0.45.0/terragrunt_linux_amd64
+          TG_BASE: >
+            https://github.com/gruntwork-io/terragrunt/releases/download/v0.45.0
+          TG_URL=${TG_BASE}/terragrunt_linux_amd64
+          curl -Lo terragrunt ${TG_URL}
           chmod +x terragrunt && sudo mv terragrunt /usr/local/bin/
       - name: Terragrunt apply (plan only by default)
         env:

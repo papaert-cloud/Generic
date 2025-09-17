@@ -1,0 +1,220 @@
+lint	Set up job	﻿2025-09-17T06:13:56.7071630Z Current runner version: '2.328.0'
+lint	Set up job	2025-09-17T06:13:56.7096996Z ##[group]Runner Image Provisioner
+lint	Set up job	2025-09-17T06:13:56.7097751Z Hosted Compute Agent
+lint	Set up job	2025-09-17T06:13:56.7098281Z Version: 20250829.383
+lint	Set up job	2025-09-17T06:13:56.7098985Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+lint	Set up job	2025-09-17T06:13:56.7099645Z Build Date: 2025-08-29T13:48:48Z
+lint	Set up job	2025-09-17T06:13:56.7100258Z ##[endgroup]
+lint	Set up job	2025-09-17T06:13:56.7100852Z ##[group]Operating System
+lint	Set up job	2025-09-17T06:13:56.7101408Z Ubuntu
+lint	Set up job	2025-09-17T06:13:56.7101854Z 24.04.3
+lint	Set up job	2025-09-17T06:13:56.7102371Z LTS
+lint	Set up job	2025-09-17T06:13:56.7102794Z ##[endgroup]
+lint	Set up job	2025-09-17T06:13:56.7103285Z ##[group]Runner Image
+lint	Set up job	2025-09-17T06:13:56.7103905Z Image: ubuntu-24.04
+lint	Set up job	2025-09-17T06:13:56.7104550Z Version: 20250907.24.1
+lint	Set up job	2025-09-17T06:13:56.7105604Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+lint	Set up job	2025-09-17T06:13:56.7106954Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+lint	Set up job	2025-09-17T06:13:56.7108120Z ##[endgroup]
+lint	Set up job	2025-09-17T06:13:56.7110556Z ##[group]GITHUB_TOKEN Permissions
+lint	Set up job	2025-09-17T06:13:56.7112472Z Actions: write
+lint	Set up job	2025-09-17T06:13:56.7113137Z Attestations: write
+lint	Set up job	2025-09-17T06:13:56.7113667Z Checks: write
+lint	Set up job	2025-09-17T06:13:56.7114207Z Contents: write
+lint	Set up job	2025-09-17T06:13:56.7115144Z Deployments: write
+lint	Set up job	2025-09-17T06:13:56.7115674Z Discussions: write
+lint	Set up job	2025-09-17T06:13:56.7116179Z Issues: write
+lint	Set up job	2025-09-17T06:13:56.7116608Z Metadata: read
+lint	Set up job	2025-09-17T06:13:56.7117168Z Models: read
+lint	Set up job	2025-09-17T06:13:56.7117620Z Packages: write
+lint	Set up job	2025-09-17T06:13:56.7118135Z Pages: write
+lint	Set up job	2025-09-17T06:13:56.7118654Z PullRequests: write
+lint	Set up job	2025-09-17T06:13:56.7119187Z RepositoryProjects: write
+lint	Set up job	2025-09-17T06:13:56.7119716Z SecurityEvents: write
+lint	Set up job	2025-09-17T06:13:56.7120394Z Statuses: write
+lint	Set up job	2025-09-17T06:13:56.7120935Z ##[endgroup]
+lint	Set up job	2025-09-17T06:13:56.7123092Z Secret source: Actions
+lint	Set up job	2025-09-17T06:13:56.7124145Z Prepare workflow directory
+lint	Set up job	2025-09-17T06:13:56.7453909Z Prepare all required actions
+lint	Set up job	2025-09-17T06:13:56.7492453Z Getting action download info
+lint	Set up job	2025-09-17T06:13:57.0892594Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+lint	Set up job	2025-09-17T06:13:57.2535528Z Download action repository 'actions/setup-go@v4' (SHA:19bb51245e9c80abacb2e91cc42b33fa478b8639)
+lint	Set up job	2025-09-17T06:13:57.7285137Z Complete job name: lint
+lint	Run actions/checkout@v4	﻿2025-09-17T06:13:57.7964100Z ##[group]Run actions/checkout@v4
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7965378Z with:
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7965930Z   repository: papaert-cloud/Generic
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7966607Z   token: ***
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7966994Z   ssh-strict: true
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7967377Z   ssh-user: git
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7967790Z   persist-credentials: true
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7968234Z   clean: true
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7968639Z   sparse-checkout-cone-mode: true
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7969103Z   fetch-depth: 1
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7969498Z   fetch-tags: false
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7969900Z   show-progress: true
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7970306Z   lfs: false
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7970678Z   submodules: false
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7971103Z   set-safe-directory: true
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.7971784Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9049239Z Syncing repository: papaert-cloud/Generic
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9051242Z ##[group]Getting Git version info
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9051970Z Working directory is '/home/runner/work/Generic/Generic'
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9052923Z [command]/usr/bin/git version
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9122155Z git version 2.51.0
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9148012Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9162464Z Temporarily overriding HOME='/home/runner/work/_temp/a7be563e-02e7-455a-b1b4-db0d218e6839' before making global git config changes
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9163935Z Adding repository directory to the temporary git global config as a safe directory
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9168056Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9204198Z Deleting the contents of '/home/runner/work/Generic/Generic'
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9208143Z ##[group]Initializing the repository
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9211858Z [command]/usr/bin/git init /home/runner/work/Generic/Generic
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9300162Z hint: Using 'master' as the name for the initial branch. This default branch name
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9301354Z hint: is subject to change. To configure the initial branch name to use in all
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9302264Z hint: of your new repositories, which will suppress this warning, call:
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9303203Z hint:
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9303942Z hint: 	git config --global init.defaultBranch <name>
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9304872Z hint:
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9305498Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9306404Z hint: 'development'. The just-created branch can be renamed via this command:
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9307098Z hint:
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9307496Z hint: 	git branch -m <name>
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9307945Z hint:
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9308527Z hint: Disable this message with "git config set advice.defaultBranchName false"
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9309972Z Initialized empty Git repository in /home/runner/work/Generic/Generic/.git/
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9315186Z [command]/usr/bin/git remote add origin https://github.com/papaert-cloud/Generic
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9353624Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9354527Z ##[group]Disabling automatic garbage collection
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9357925Z [command]/usr/bin/git config --local gc.auto 0
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9388153Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9389337Z ##[group]Setting up auth
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9395663Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9426823Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9739169Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9770637Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+lint	Run actions/checkout@v4	2025-09-17T06:13:57.9996486Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.0033121Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.0041643Z ##[group]Fetching the repository
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.0043224Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +69cb9140b0f2183b6658445de5aae5df7c564c6e:refs/remotes/pull/4/merge
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.6325645Z From https://github.com/papaert-cloud/Generic
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.6326849Z  * [new ref]         69cb9140b0f2183b6658445de5aae5df7c564c6e -> pull/4/merge
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.6357600Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.6358553Z ##[group]Determining the checkout info
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.6360124Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.6365755Z [command]/usr/bin/git sparse-checkout disable
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.6405920Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.6434744Z ##[group]Checking out the ref
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.6438068Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/4/merge
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9016033Z Note: switching to 'refs/remotes/pull/4/merge'.
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9016815Z 
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9017269Z You are in 'detached HEAD' state. You can look around, make experimental
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9018232Z changes and commit them, and you can discard any commits you make in this
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9019182Z state without impacting any branches by switching back to a branch.
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9019708Z 
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9020103Z If you want to create a new branch to retain commits you create, you may
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9020941Z do so (now or later) by using -c with the switch command. Example:
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9021416Z 
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9021658Z   git switch -c <new-branch-name>
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9022010Z 
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9022530Z Or undo this operation with:
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9022917Z 
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9023198Z   git switch -
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9023593Z 
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9024128Z Turn off this advice by setting config variable advice.detachedHead to false
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9025083Z 
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9025838Z HEAD is now at 69cb914 Merge 379d670590656498882307987b62cc76cf2116cd into b1fa9b563261d4d6cd806f081976006c7aa1a811
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9033905Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9077900Z [command]/usr/bin/git log -1 --format=%H
+lint	Run actions/checkout@v4	2025-09-17T06:13:58.9100857Z 69cb9140b0f2183b6658445de5aae5df7c564c6e
+lint	Set up Go	﻿2025-09-17T06:13:58.9395390Z ##[group]Run actions/setup-go@v4
+lint	Set up Go	2025-09-17T06:13:58.9396001Z with:
+lint	Set up Go	2025-09-17T06:13:58.9396368Z   go-version: 1.20
+lint	Set up Go	2025-09-17T06:13:58.9396750Z   check-latest: false
+lint	Set up Go	2025-09-17T06:13:58.9398188Z   token: ***
+lint	Set up Go	2025-09-17T06:13:58.9399313Z   cache: true
+lint	Set up Go	2025-09-17T06:13:58.9399807Z ##[endgroup]
+lint	Set up Go	2025-09-17T06:13:59.0961145Z Setup go version spec 1.20
+lint	Set up Go	2025-09-17T06:13:59.1222020Z Attempting to download 1.20...
+lint	Set up Go	2025-09-17T06:13:59.5258510Z matching 1.20...
+lint	Set up Go	2025-09-17T06:13:59.5304580Z Acquiring 1.20.14 from https://github.com/actions/go-versions/releases/download/1.20.14-7809684997/go-1.20.14-linux-x64.tar.gz
+lint	Set up Go	2025-09-17T06:14:00.1408346Z Extracting Go...
+lint	Set up Go	2025-09-17T06:14:00.1547081Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/3bf40d25-f2ce-48f6-abce-d009a095de57 -f /home/runner/work/_temp/54314f63-9b7e-49aa-bfb0-a2b92839b3b7
+lint	Set up Go	2025-09-17T06:14:01.8644448Z Successfully extracted go to /home/runner/work/_temp/3bf40d25-f2ce-48f6-abce-d009a095de57
+lint	Set up Go	2025-09-17T06:14:01.8645612Z Adding to the cache ...
+lint	Set up Go	2025-09-17T06:14:06.0822887Z Successfully cached go to /opt/hostedtoolcache/go/1.20.14/x64
+lint	Set up Go	2025-09-17T06:14:06.0824750Z Added go to the path
+lint	Set up Go	2025-09-17T06:14:06.0826764Z Successfully set up Go version 1.20
+lint	Set up Go	2025-09-17T06:14:06.1013023Z [command]/opt/hostedtoolcache/go/1.20.14/x64/bin/go env GOMODCACHE
+lint	Set up Go	2025-09-17T06:14:06.1041511Z [command]/opt/hostedtoolcache/go/1.20.14/x64/bin/go env GOCACHE
+lint	Set up Go	2025-09-17T06:14:06.1077637Z /home/runner/go/pkg/mod
+lint	Set up Go	2025-09-17T06:14:06.1096012Z /home/runner/.cache/go-build
+lint	Set up Go	2025-09-17T06:14:06.1131428Z ##[warning]Restore cache failed: Dependencies file is not found in /home/runner/work/Generic/Generic. Supported file pattern: go.sum
+lint	Set up Go	2025-09-17T06:14:06.1158075Z go version go1.20.14 linux/amd64
+lint	Set up Go	2025-09-17T06:14:06.1158430Z 
+lint	Set up Go	2025-09-17T06:14:06.1158891Z ##[group]go env
+lint	Set up Go	2025-09-17T06:14:06.2315780Z GO111MODULE=""
+lint	Set up Go	2025-09-17T06:14:06.2316503Z GOARCH="amd64"
+lint	Set up Go	2025-09-17T06:14:06.2316845Z GOBIN=""
+lint	Set up Go	2025-09-17T06:14:06.2317082Z GOCACHE="/home/runner/.cache/go-build"
+lint	Set up Go	2025-09-17T06:14:06.2317434Z GOENV="/home/runner/.config/go/env"
+lint	Set up Go	2025-09-17T06:14:06.2317668Z GOEXE=""
+lint	Set up Go	2025-09-17T06:14:06.2317860Z GOEXPERIMENT=""
+lint	Set up Go	2025-09-17T06:14:06.2318053Z GOFLAGS=""
+lint	Set up Go	2025-09-17T06:14:06.2318232Z GOHOSTARCH="amd64"
+lint	Set up Go	2025-09-17T06:14:06.2318427Z GOHOSTOS="linux"
+lint	Set up Go	2025-09-17T06:14:06.2318620Z GOINSECURE=""
+lint	Set up Go	2025-09-17T06:14:06.2318831Z GOMODCACHE="/home/runner/go/pkg/mod"
+lint	Set up Go	2025-09-17T06:14:06.2319120Z GONOPROXY=""
+lint	Set up Go	2025-09-17T06:14:06.2319312Z GONOSUMDB=""
+lint	Set up Go	2025-09-17T06:14:06.2319492Z GOOS="linux"
+lint	Set up Go	2025-09-17T06:14:06.2319706Z GOPATH="/home/runner/go"
+lint	Set up Go	2025-09-17T06:14:06.2319943Z GOPRIVATE=""
+lint	Set up Go	2025-09-17T06:14:06.2320198Z GOPROXY="https://proxy.golang.org,direct"
+lint	Set up Go	2025-09-17T06:14:06.2320544Z GOROOT="/opt/hostedtoolcache/go/1.20.14/x64"
+lint	Set up Go	2025-09-17T06:14:06.2320826Z GOSUMDB="sum.golang.org"
+lint	Set up Go	2025-09-17T06:14:06.2321035Z GOTMPDIR=""
+lint	Set up Go	2025-09-17T06:14:06.2321342Z GOTOOLDIR="/opt/hostedtoolcache/go/1.20.14/x64/pkg/tool/linux_amd64"
+lint	Set up Go	2025-09-17T06:14:06.2321699Z GOVCS=""
+lint	Set up Go	2025-09-17T06:14:06.2321881Z GOVERSION="go1.20.14"
+lint	Set up Go	2025-09-17T06:14:06.2322093Z GCCGO="gccgo"
+lint	Set up Go	2025-09-17T06:14:06.2322266Z GOAMD64="v1"
+lint	Set up Go	2025-09-17T06:14:06.2322434Z AR="ar"
+lint	Set up Go	2025-09-17T06:14:06.2322596Z CC="gcc"
+lint	Set up Go	2025-09-17T06:14:06.2322759Z CXX="g++"
+lint	Set up Go	2025-09-17T06:14:06.2322923Z CGO_ENABLED="1"
+lint	Set up Go	2025-09-17T06:14:06.2323104Z GOMOD="/dev/null"
+lint	Set up Go	2025-09-17T06:14:06.2323278Z GOWORK=""
+lint	Set up Go	2025-09-17T06:14:06.2323489Z CGO_CFLAGS="-O2 -g"
+lint	Set up Go	2025-09-17T06:14:06.2324067Z CGO_CPPFLAGS=""
+lint	Set up Go	2025-09-17T06:14:06.2324488Z CGO_CXXFLAGS="-O2 -g"
+lint	Set up Go	2025-09-17T06:14:06.2324722Z CGO_FFLAGS="-O2 -g"
+lint	Set up Go	2025-09-17T06:14:06.2324917Z CGO_LDFLAGS="-O2 -g"
+lint	Set up Go	2025-09-17T06:14:06.2325138Z PKG_CONFIG="pkg-config"
+lint	Set up Go	2025-09-17T06:14:06.2325793Z GOGCCFLAGS="-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build4256518014=/tmp/go-build -gno-record-gcc-switches"
+lint	Set up Go	2025-09-17T06:14:06.2326355Z 
+lint	Set up Go	2025-09-17T06:14:06.2326729Z ##[endgroup]
+lint	Go fmt check	﻿2025-09-17T06:14:06.2510972Z ##[group]Run gofmt_out=$(gofmt -l . || true)
+lint	Go fmt check	2025-09-17T06:14:06.2511357Z [36;1mgofmt_out=$(gofmt -l . || true)[0m
+lint	Go fmt check	2025-09-17T06:14:06.2511638Z [36;1mif [ -n "$gofmt_out" ]; then[0m
+lint	Go fmt check	2025-09-17T06:14:06.2511920Z [36;1m  echo "Files not gofmt'd:\n$gofmt_out"; exit 1[0m
+lint	Go fmt check	2025-09-17T06:14:06.2512198Z [36;1mfi[0m
+lint	Go fmt check	2025-09-17T06:14:06.2567957Z shell: /usr/bin/bash -e {0}
+lint	Go fmt check	2025-09-17T06:14:06.2568232Z ##[endgroup]
+lint	Run go vet	﻿2025-09-17T06:14:06.2847979Z ##[group]Run go vet ./...
+lint	Run go vet	2025-09-17T06:14:06.2848276Z [36;1mgo vet ./...[0m
+lint	Run go vet	2025-09-17T06:14:06.2878232Z shell: /usr/bin/bash -e {0}
+lint	Run go vet	2025-09-17T06:14:06.2878478Z ##[endgroup]
+lint	Run go vet	2025-09-17T06:14:06.2978780Z pattern ./...: directory prefix . does not contain main module or its selected dependencies
+lint	Run go vet	2025-09-17T06:14:06.2988132Z ##[error]Process completed with exit code 1.
+lint	Post Run actions/checkout@v4	﻿2025-09-17T06:14:06.3086396Z Post job cleanup.
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4006188Z [command]/usr/bin/git version
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4042118Z git version 2.51.0
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4089302Z Temporarily overriding HOME='/home/runner/work/_temp/e36febb1-9e9d-461b-877b-4e5b6677e5b5' before making global git config changes
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4090508Z Adding repository directory to the temporary git global config as a safe directory
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4094461Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4127155Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4158631Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4384809Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4404555Z http.https://github.com/.extraheader
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4417661Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+lint	Post Run actions/checkout@v4	2025-09-17T06:14:06.4447608Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+lint	Complete job	﻿2025-09-17T06:14:06.4769772Z Cleaning up orphan processes

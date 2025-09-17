@@ -1,8 +1,11 @@
+---
 name: Terraform Drift Detection
 
 on:
   schedule:
-    - cron: '0 5 * * *' # daily
+    - cron: '0 5 * * *'  # daily
+    - cron: '0 0 * * 1'   # weekly
+  workflow_dispatch: true
 
 jobs:
   drift:

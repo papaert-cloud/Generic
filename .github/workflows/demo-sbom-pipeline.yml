@@ -1,9 +1,11 @@
+---
 name: Demo SBOM pipeline
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: true
   push:
-    branches: [ main, docs-reorg ]
+    branches:
+      - main
+      - docs-reorg
 
 permissions:
   id-token: write   # required for GitHub OIDC
@@ -19,8 +21,13 @@ jobs:
       - name: Set up syft + trivy
         run: |
           sudo apt-get update && sudo apt-get install -y jq
-          curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
-          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+          SYFT_INSTALL_URL: >
+            https://raw.githubusercontent.com/anchore/syft/main/install.sh
+          TRIVY_BASE: >
+            https://raw.githubusercontent.com/aquasecurity/trivy/main
+          TRIVY_INSTALL_URL: ${TRIVY_BASE}/contrib/install.sh
+          curl -sSfL ${SYFT_INSTALL_URL} | sh -s -- -b /usr/local/bin
+          curl -sfL ${TRIVY_INSTALL_URL} | sh -s -- -b /usr/local/bin
 
       - name: Generate SBOM (syft)
         run: |
@@ -32,13 +39,13 @@ jobs:
 
       - name: Upload artifacts to S3 via OIDC
         env:
-          S3_URI: s3://REPLACE-ME-demo-bucket/${{ github.repository }}/$GITHUB_RUN_ID/
+          S3_BUCKET_BASE: s3://REPLACE-ME-demo-bucket
+          S3_URI: |
+            ${S3_BUCKET_BASE}/${{ github.repository }}/$GITHUB_RUN_ID/
         run: |
-          # Configure AWS credentials via OIDC and assume role (example uses aws-actions/configure-aws-credentials)
+          # Configure AWS credentials via OIDC and assume role
           echo "Uploading artifacts to $S3_URI"
           gh auth setup-git 2>/dev/null || true
-          # The recommended action is aws-actions/configure-aws-credentials with role-to-assume and OIDC
-          # See README for example IAM trust policy and bucket policy
           ls -la output
 
   kyverno-check:
@@ -50,8 +57,12 @@ jobs:
 
       - name: Run Kyverno CLI (example)
         run: |
-          # If you want to run Kyverno policies in CI without cluster, use kyverno CLI
-          docker run --rm -v "${{ github.workspace }}:/workspace" ghcr.io/kyverno/kyverno:latest kyverno test /workspace/policies || true
+          # If you want to run Kyverno policies in CI without cluster,
+          # use the Kyverno CLI
+          KYVERNO_IMAGE=ghcr.io/kyverno/kyverno:latest
+          docker run --rm \
+            -v "${{ github.workspace }}:/workspace" \
+            ${KYVERNO_IMAGE} kyverno test /workspace/policies || true
 
   notes:
     runs-on: ubuntu-latest

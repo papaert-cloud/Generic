@@ -1,7 +1,7 @@
+---
 name: DAST - OWASP ZAP Full Scan
-
 on:
-  workflow_dispatch:
+  workflow_dispatch: true
   schedule:
     - cron: '0 4 * * 1' # weekly on Monday
 
@@ -12,10 +12,19 @@ jobs:
       - uses: actions/checkout@v4
       - name: Start ZAP Docker
         run: |
-          docker run -d --name zap -p 8080:8080 owasp/zap2docker-stable zap.sh -daemon -host 0.0.0.0 -port 8080
+          ZAP_IMAGE=owasp/zap2docker-stable
+          docker run -d \
+            --name zap \
+            -p 8080:8080 \
+            ${ZAP_IMAGE} \
+            zap.sh -daemon -host 0.0.0.0 -port 8080
       - name: Run ZAP baseline scan
         run: |
-          docker run --rm -v $(pwd):/zap/wrk/:rw owasp/zap2docker-stable zap-baseline.py -t http://staging.example.com -r zap-report.html
+          TARGET_URL=http://staging.example.com
+          docker run --rm \
+            -v $(pwd):/zap/wrk/:rw \
+            owasp/zap2docker-stable \
+            zap-baseline.py -t ${TARGET_URL} -r zap-report.html
       - name: Upload report
         uses: actions/upload-artifact@v4
         with:

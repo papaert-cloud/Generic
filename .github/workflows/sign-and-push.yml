@@ -1,8 +1,9 @@
+---
 name: Sign Image & Push
-
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 permissions:
   id-token: write
@@ -18,20 +19,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build image
-        run: docker build -t myapp:${{ github.sha }} .
+        run: |
+          # build image; keep line length reasonable
+          docker build -t myapp:${{ github.sha }} .
 
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsKMSSign  # role must allow kms:Sign/Encrypt and access to ECR push
+          # role must allow kms:Sign/Encrypt and access to ECR push
+          role-to-assume: >
+            arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsKMSSign
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Sign image with cosign (KMS key)
         env:
           COSIGN_EXPERIMENTAL: '1'
+          KMS_KEY_ARN: >-
+            arn:aws:kms:${{ env.AWS_REGION }}:${{ env.AWS_ACCOUNT_ID }}:key/
+            EXAMPLE-KEY-ARN-WITH-LONG-ID
         run: |
           # KMS-key ARN example: arn:aws:kms:us-east-1:005965605891:key/EXAMPLE
-          cosign sign --key kms://arn:aws:kms:${{ env.AWS_REGION }}:${{ env.AWS_ACCOUNT_ID }}:key/EXAMPLE myapp:${{ github.sha }}
+          cosign sign \
+            --key kms://${KMS_KEY_ARN} \
+            myapp:${{ github.sha }}
 
       - name: Push to ECR
         run: |

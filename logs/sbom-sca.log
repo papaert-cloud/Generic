@@ -1,0 +1,142 @@
+sbom-scan	Set up job	﻿2025-09-17T06:14:00.8715001Z Current runner version: '2.328.0'
+sbom-scan	Set up job	2025-09-17T06:14:00.8740049Z ##[group]Runner Image Provisioner
+sbom-scan	Set up job	2025-09-17T06:14:00.8740961Z Hosted Compute Agent
+sbom-scan	Set up job	2025-09-17T06:14:00.8741530Z Version: 20250829.383
+sbom-scan	Set up job	2025-09-17T06:14:00.8742133Z Commit: 27cb235aab5b0e52e153a26cd86b4742e89dac5d
+sbom-scan	Set up job	2025-09-17T06:14:00.8742925Z Build Date: 2025-08-29T13:48:48Z
+sbom-scan	Set up job	2025-09-17T06:14:00.8743498Z ##[endgroup]
+sbom-scan	Set up job	2025-09-17T06:14:00.8744062Z ##[group]Operating System
+sbom-scan	Set up job	2025-09-17T06:14:00.8744699Z Ubuntu
+sbom-scan	Set up job	2025-09-17T06:14:00.8745187Z 24.04.3
+sbom-scan	Set up job	2025-09-17T06:14:00.8745635Z LTS
+sbom-scan	Set up job	2025-09-17T06:14:00.8746315Z ##[endgroup]
+sbom-scan	Set up job	2025-09-17T06:14:00.8746798Z ##[group]Runner Image
+sbom-scan	Set up job	2025-09-17T06:14:00.8747393Z Image: ubuntu-24.04
+sbom-scan	Set up job	2025-09-17T06:14:00.8747965Z Version: 20250907.24.1
+sbom-scan	Set up job	2025-09-17T06:14:00.8748952Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250907.24/images/ubuntu/Ubuntu2404-Readme.md
+sbom-scan	Set up job	2025-09-17T06:14:00.8750328Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250907.24
+sbom-scan	Set up job	2025-09-17T06:14:00.8751486Z ##[endgroup]
+sbom-scan	Set up job	2025-09-17T06:14:00.8752590Z ##[group]GITHUB_TOKEN Permissions
+sbom-scan	Set up job	2025-09-17T06:14:00.8754641Z Contents: read
+sbom-scan	Set up job	2025-09-17T06:14:00.8755193Z Metadata: read
+sbom-scan	Set up job	2025-09-17T06:14:00.8755790Z ##[endgroup]
+sbom-scan	Set up job	2025-09-17T06:14:00.8758402Z Secret source: Actions
+sbom-scan	Set up job	2025-09-17T06:14:00.8759410Z Prepare workflow directory
+sbom-scan	Set up job	2025-09-17T06:14:00.9149345Z Prepare all required actions
+sbom-scan	Set up job	2025-09-17T06:14:00.9187748Z Getting action download info
+sbom-scan	Set up job	2025-09-17T06:14:01.2557965Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+sbom-scan	Set up job	2025-09-17T06:14:01.4143842Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+sbom-scan	Set up job	2025-09-17T06:14:01.6041819Z Complete job name: sbom-scan
+sbom-scan	Run actions/checkout@v4	﻿2025-09-17T06:14:01.6715629Z ##[group]Run actions/checkout@v4
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6716690Z with:
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6717111Z   repository: papaert-cloud/Generic
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6717781Z   token: ***
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6718165Z   ssh-strict: true
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6718568Z   ssh-user: git
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6718969Z   persist-credentials: true
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6719407Z   clean: true
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6719807Z   sparse-checkout-cone-mode: true
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6720274Z   fetch-depth: 1
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6720665Z   fetch-tags: false
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6721056Z   show-progress: true
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6721461Z   lfs: false
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6721818Z   submodules: false
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6722220Z   set-safe-directory: true
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6722953Z env:
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6723333Z   AWS_REGION: us-east-1
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.6723788Z ##[endgroup]
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7775271Z Syncing repository: papaert-cloud/Generic
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7777476Z ##[group]Getting Git version info
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7778227Z Working directory is '/home/runner/work/Generic/Generic'
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7779357Z [command]/usr/bin/git version
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7853473Z git version 2.51.0
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7879223Z ##[endgroup]
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7894631Z Temporarily overriding HOME='/home/runner/work/_temp/e2257573-6b02-4099-b0e0-d0227e813b24' before making global git config changes
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7897307Z Adding repository directory to the temporary git global config as a safe directory
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7901254Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7937373Z Deleting the contents of '/home/runner/work/Generic/Generic'
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7941363Z ##[group]Initializing the repository
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.7945865Z [command]/usr/bin/git init /home/runner/work/Generic/Generic
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8036983Z hint: Using 'master' as the name for the initial branch. This default branch name
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8038298Z hint: is subject to change. To configure the initial branch name to use in all
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8039227Z hint: of your new repositories, which will suppress this warning, call:
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8040215Z hint:
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8041070Z hint: 	git config --global init.defaultBranch <name>
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8042059Z hint:
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8043020Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8044633Z hint: 'development'. The just-created branch can be renamed via this command:
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8045919Z hint:
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8046888Z hint: 	git branch -m <name>
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8047722Z hint:
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8048790Z hint: Disable this message with "git config set advice.defaultBranchName false"
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8050580Z Initialized empty Git repository in /home/runner/work/Generic/Generic/.git/
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8054867Z [command]/usr/bin/git remote add origin https://github.com/papaert-cloud/Generic
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8090805Z ##[endgroup]
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8092035Z ##[group]Disabling automatic garbage collection
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8095707Z [command]/usr/bin/git config --local gc.auto 0
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8123645Z ##[endgroup]
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8124867Z ##[group]Setting up auth
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8131149Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8161703Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8490601Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8522416Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8748818Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8783828Z ##[endgroup]
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8785237Z ##[group]Fetching the repository
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:01.8793891Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +69cb9140b0f2183b6658445de5aae5df7c564c6e:refs/remotes/pull/4/merge
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.5838805Z From https://github.com/papaert-cloud/Generic
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.5845261Z  * [new ref]         69cb9140b0f2183b6658445de5aae5df7c564c6e -> pull/4/merge
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.5875523Z ##[endgroup]
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.5877029Z ##[group]Determining the checkout info
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.5878515Z ##[endgroup]
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.5881209Z [command]/usr/bin/git sparse-checkout disable
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.5923741Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.5953774Z ##[group]Checking out the ref
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.5958039Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/4/merge
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8404701Z Note: switching to 'refs/remotes/pull/4/merge'.
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8405845Z 
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8406838Z You are in 'detached HEAD' state. You can look around, make experimental
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8408557Z changes and commit them, and you can discard any commits you make in this
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8410410Z state without impacting any branches by switching back to a branch.
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8411450Z 
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8412170Z If you want to create a new branch to retain commits you create, you may
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8413808Z do so (now or later) by using -c with the switch command. Example:
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8414770Z 
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8415236Z   git switch -c <new-branch-name>
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8415958Z 
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8416540Z Or undo this operation with:
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8417035Z 
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8417293Z   git switch -
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8417655Z 
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8418227Z Turn off this advice by setting config variable advice.detachedHead to false
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8419063Z 
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8420069Z HEAD is now at 69cb914 Merge 379d670590656498882307987b62cc76cf2116cd into b1fa9b563261d4d6cd806f081976006c7aa1a811
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8424215Z ##[endgroup]
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8464414Z [command]/usr/bin/git log -1 --format=%H
+sbom-scan	Run actions/checkout@v4	2025-09-17T06:14:02.8487137Z 69cb9140b0f2183b6658445de5aae5df7c564c6e
+sbom-scan	Build image	﻿2025-09-17T06:14:02.8701956Z ##[group]Run docker build -t app:69cb9140b0f2183b6658445de5aae5df7c564c6e .
+sbom-scan	Build image	2025-09-17T06:14:02.8703334Z [36;1mdocker build -t app:69cb9140b0f2183b6658445de5aae5df7c564c6e .[0m
+sbom-scan	Build image	2025-09-17T06:14:02.8757993Z shell: /usr/bin/bash -e {0}
+sbom-scan	Build image	2025-09-17T06:14:02.8758946Z env:
+sbom-scan	Build image	2025-09-17T06:14:02.8759772Z   AWS_REGION: us-east-1
+sbom-scan	Build image	2025-09-17T06:14:02.8760632Z ##[endgroup]
+sbom-scan	Build image	2025-09-17T06:14:03.2903732Z #0 building with "default" instance using docker driver
+sbom-scan	Build image	2025-09-17T06:14:03.2904329Z 
+sbom-scan	Build image	2025-09-17T06:14:03.2904596Z #1 [internal] load build definition from Dockerfile
+sbom-scan	Build image	2025-09-17T06:14:03.2905261Z #1 transferring dockerfile: 2B done
+sbom-scan	Build image	2025-09-17T06:14:03.2905752Z #1 DONE 0.0s
+sbom-scan	Build image	2025-09-17T06:14:03.2931966Z ERROR: failed to build: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
+sbom-scan	Build image	2025-09-17T06:14:03.2980348Z ##[error]Process completed with exit code 1.
+sbom-scan	Post Run actions/checkout@v4	﻿2025-09-17T06:14:03.3098839Z Post job cleanup.
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4018191Z [command]/usr/bin/git version
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4053578Z git version 2.51.0
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4095672Z Temporarily overriding HOME='/home/runner/work/_temp/b2c4a511-9242-49d1-8e59-44c7c23695b5' before making global git config changes
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4096896Z Adding repository directory to the temporary git global config as a safe directory
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4107852Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Generic/Generic
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4142208Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4173242Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4404301Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4424214Z http.https://github.com/.extraheader
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4436904Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+sbom-scan	Post Run actions/checkout@v4	2025-09-17T06:14:03.4466596Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+sbom-scan	Complete job	﻿2025-09-17T06:14:03.4852185Z Cleaning up orphan processes

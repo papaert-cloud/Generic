@@ -1,8 +1,9 @@
+---
 name: SonarQube Scan (optional)
-
 on:
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   sonar:
@@ -13,6 +14,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '11'
+          distribution: 'temurin'
       - name: Run SonarQube Scanner
         env:
           # set SONAR_TOKEN in repo secrets if enabling
