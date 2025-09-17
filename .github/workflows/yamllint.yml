@@ -2,7 +2,7 @@ name: YAML Lint
 
 on:
   push:
-    branches: [ main, docs-reorg ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
