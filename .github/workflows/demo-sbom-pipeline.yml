@@ -9,12 +9,22 @@ permissions:
   id-token: write   # required for GitHub OIDC
   contents: read
 
+env:
+  AWS_REGION: us-east-1
+  AWS_ACCOUNT_ID: 005965605891
+
 jobs:
   generate-and-scan:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsOIDCRole
+          aws-region: ${{ env.AWS_REGION }}
 
       - name: Set up syft + trivy
         run: |
@@ -32,14 +42,13 @@ jobs:
 
       - name: Upload artifacts to S3 via OIDC
         env:
-          S3_URI: s3://REPLACE-ME-demo-bucket/${{ github.repository }}/$GITHUB_RUN_ID/
+          S3_URI: s3://REPLACE-ME-demo-bucket/${{ github.repository }}/${{ github.run_id }}/
         run: |
-          # Configure AWS credentials via OIDC and assume role (example uses aws-actions/configure-aws-credentials)
           echo "Uploading artifacts to $S3_URI"
-          gh auth setup-git 2>/dev/null || true
-          # The recommended action is aws-actions/configure-aws-credentials with role-to-assume and OIDC
-          # See README for example IAM trust policy and bucket policy
+          mkdir -p output
           ls -la output
+          # Uncomment below to actually upload to S3 (replace bucket name)
+          # aws s3 cp output/ $S3_URI --recursive
 
   kyverno-check:
     runs-on: ubuntu-latest

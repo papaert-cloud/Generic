@@ -7,12 +7,24 @@ on:
 
 env:
   TF_WORKING_DIR: terraform
+  AWS_REGION: us-east-1
+  AWS_ACCOUNT_ID: 005965605891
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   terraform-plan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsOIDCRole
+          aws-region: ${{ env.AWS_REGION }}
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
