@@ -17,7 +17,10 @@ def write_tmp(tmp_path, data):
 def test_no_vulns_pass(tmp_path):
     data = make_grype_json([])
     p = write_tmp(tmp_path, data)
-    res = subprocess.run([sys.executable, "../scripts/check_grype_severity.py", p, "--threshold", "HIGH"], cwd=tmp_path)
+    # Locate the solution directory (one parent up) and call the script from its scripts/ folder
+    solution_dir = Path(__file__).resolve().parents[1]
+    script = solution_dir / 'scripts' / 'check_grype_severity.py'
+    res = subprocess.run([sys.executable, str(script), p, "--threshold", "HIGH"], cwd=tmp_path)
     assert res.returncode == 0
 
 
@@ -25,5 +28,7 @@ def test_one_high_fails(tmp_path):
     matches = [{"vulnerability": {"id": "CVE-9999-1", "severity": "HIGH"}}]
     data = make_grype_json(matches)
     p = write_tmp(tmp_path, data)
-    res = subprocess.run([sys.executable, "../scripts/check_grype_severity.py", p, "--threshold", "HIGH"], cwd=tmp_path)
+    solution_dir = Path(__file__).resolve().parents[1]
+    script = solution_dir / 'scripts' / 'check_grype_severity.py'
+    res = subprocess.run([sys.executable, str(script), p, "--threshold", "HIGH"], cwd=tmp_path)
     assert res.returncode == 1

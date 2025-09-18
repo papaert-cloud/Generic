@@ -11,7 +11,10 @@ PUSH_REMOTE="${PUSH_REMOTE:-origin}"
 PUSH_BRANCH="${PUSH_BRANCH:-lab-folio}"
 # AUTO_PUSH=1 to enable automatic pushes after a successful commit
 # NOTE: default AUTO_PUSH is enabled for this environment; set AUTO_PUSH=0 to disable
-AUTO_PUSH="${AUTO_PUSH:-1}"
+# AUTO_PUSH=1 to enable automatic pushes after a successful commit
+# NOTE: default AUTO_PUSH is disabled for safety; set AUTO_PUSH=1 to enable
+# You can enable for a single commit: AUTO_PUSH=1 ./scripts/commit-and-push.sh -m "msg"
+AUTO_PUSH="${AUTO_PUSH:-0}"
 # FORCE_ALLOW=1 to allow committing on branches other than lab-folio (use with caution)
 FORCE_ALLOW="${FORCE_ALLOW:-0}"
 

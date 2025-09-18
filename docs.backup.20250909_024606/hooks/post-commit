@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Example post-commit hook stored in docs/hooks; use scripts/setup-hooks.sh to install
-AUTO_PUSH=${AUTO_PUSH:-1}
+AUTO_PUSH=${AUTO_PUSH:-0}
 PUSH_REMOTE=${PUSH_REMOTE:-origin}
 PUSH_BRANCH=${PUSH_BRANCH:-lab-folio}
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
